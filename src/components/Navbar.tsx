@@ -27,7 +27,7 @@ export default function Navbar() {
             <span
               className={`
                 absolute -bottom-2 left-0 w-full h-[8px]
-                transition-opacity duration-[1200ms]
+                transition-opacity duration-[1000ms]
                 ${location.pathname === link.path ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}
               `}
             >
