@@ -127,12 +127,6 @@ export default function Home() {
           style={{ left: '-2px', top: '921px', width: '632px', height: '538px' }}
         />
         <SketchWithReveal
-          src="/src/assets/images/ak-logo-sketch.svg"
-          alt=""
-          label="Logo!"
-          style={{ left: '660px', top: '1089px', width: '189px', height: '176px' }}
-        />
-        <SketchWithReveal
           src="/src/assets/images/dragonfly-sketch.svg"
           alt=""
           label="Favorite animal"
@@ -150,6 +144,12 @@ export default function Home() {
           alt=""
           label="My mom, sister, and I hiking in 2015"
           style={{ left: '629px', top: '1094px', width: '831px', height: '718px' }}
+        />
+        <SketchWithReveal
+          src="/src/assets/images/ak-logo-sketch.svg"
+          alt=""
+          label="Logo!"
+          style={{ left: '660px', top: '1089px', width: '189px', height: '176px' }}
         />
       </section>
 
