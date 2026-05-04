@@ -26,7 +26,7 @@ export default function Footer() {
           <img
             src="/src/assets/images/linkedin-icon.svg"
             alt="LinkedIn"
-            className="w-[42px] h-[42px] md:w-[84px] md:h-[84px]"
+            className="w-[42px] h-[42px] md:w-[74px] md:h-[74px]"
           />
         </a>
 
@@ -39,7 +39,7 @@ export default function Footer() {
           <img
             src="/src/assets/images/github-icon.svg"
             alt="GitHub"
-            className="w-[42px] h-[42px] md:w-[84px] md:h-[84px]"
+            className="w-[42px] h-[42px] md:w-[74px] md:h-[74px]"
           />
         </a>
 
@@ -50,7 +50,7 @@ export default function Footer() {
           <img
             src="/src/assets/images/email-icon.svg"
             alt="Email"
-            className="w-[42px] h-[42px] md:w-[84px] md:h-[84px]"
+            className="w-[42px] h-[42px] md:w-[74px] md:h-[74px]"
           />
         </a>
       </div>
