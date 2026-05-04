@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'HWTAetnaStreamer';
+  src: url('./assets/fonts/HWT-Aetna-Streamer-Fill.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+  --navy: #111E33;
+  --font-display: 'HWTAetnaStreamer', serif;
+  --font-body: 'Averia Libre', serif;
+}
+
+* {
+  cursor: url('./assets/cursor/pen-cursor.png'), auto;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--navy);
+  background-image: url('./assets/images/bg-texture.png');
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+h1, h2, h3, h4, h5, h6, nav {
+  font-family: var(--font-display);
+  color: var(--navy);
+}
