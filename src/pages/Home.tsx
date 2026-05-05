@@ -215,6 +215,215 @@ export default function Home() {
           />
         </div>
       </section>
+      {/* STORY SECTION - DESKTOP */}
+      <section className="hidden md:block w-full" style={{ overflow: 'visible', marginTop: '100px' }}>
+
+        {/* Top sketch line */}
+        <img
+          src="/src/assets/images/above-images-sketch-line.svg"
+          alt=""
+          style={{
+            width: '100%',
+            height: '247.31px',
+            display: 'block',
+            position: 'relative',
+            zIndex: 5,
+            marginBottom: '-240px',
+            marginLeft: '-140px',
+          }}
+        />
+
+        {/* Birthday image */}
+        <div style={{ position: 'relative', width: '100%', zIndex: 1 }}>
+          <img
+            src="/src/assets/images/birthday-image.png"
+            alt=""
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+          />
+          <p
+            style={{
+              position: 'absolute',
+              left: '999px',
+              top: '159px',
+              width: '377px',
+              fontSize: '38px',
+              fontFamily: 'var(--font-body)',
+              color: 'white',
+              lineHeight: '1.3',
+            }}
+          >
+            Hello! My name is Alexia Kouletsis. I grew up in Hershey, Pennsylvania. Since I was about this years old, art has consumed my life. Art has been and will always be my creative outlet, emotional comfort, and method of appreciating the beauty in world around me.
+          </p>
+        </div>
+
+        {/* Painting image */}
+        <div style={{ position: 'relative', width: '100%', zIndex: 2, marginTop: '-250px' }}>
+          <img
+            src="/src/assets/images/me-painting-image.png"
+            alt=""
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+          />
+          <p
+            style={{
+              position: 'absolute',
+              left: '687px',
+              top: '303px',
+              width: '705px',
+              fontSize: '38px',
+              fontFamily: 'var(--font-body)',
+              color: '#111E33',
+              lineHeight: '1.3',
+            }}
+          >
+            Somewhere along the way of the previous image to this one, I additionally fell in love with coding. I took my first computer science class as a Sophomore in high school. The act of breaking down problems, building them back up again, and improving upon them evoked the same emotions that putting paint on a blank canvas did—excitement for new opportunities.
+          </p>
+        </div>
+
+        {/* Graduating image */}
+        <div style={{ position: 'relative', width: '100%', zIndex: 3, marginTop: '-200px' }}>
+          <img
+            src="/src/assets/images/me-graduating-image.png"
+            alt=""
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+          />
+          <p
+            style={{
+              position: 'absolute',
+              left: '90px',
+              top: '115px',
+              width: '542px',
+              fontSize: '38px',
+              fontFamily: 'var(--font-body)',
+              color: '#111E33',
+              lineHeight: '1.3',
+            }}
+          >
+            I now aim to synthesize both art and technology into my life. I believe that disintegrating the boundaries between technology and other academic fields is essential for progression and perspective in any future innovations.
+          </p>
+          <p
+            style={{
+              position: 'absolute',
+              left: '877px',
+              top: '690px',
+              width: '468px',
+              fontSize: '38px',
+              fontFamily: 'var(--font-body)',
+              color: '#111E33',
+              lineHeight: '1.3',
+            }}
+          >
+            I view myself as an artist who uses technology as my paintbrush. Click anywhere below to see how I apply this philosophy throughout my various works!
+          </p>
+        </div>
+
+        {/* Bottom sketch line */}
+        <img
+          src="/src/assets/images/bellow-images-sketch-line.svg"
+          alt=""
+          style={{ width: '100%', height: '64.17px', display: 'block', position: 'relative', zIndex: 4, marginTop: '-40px' }}
+        />
+      </section>
+
+      {/* STORY SECTION - MOBILE */}
+      <section className="md:hidden relative w-full overflow-hidden" style={{ marginTop: '40px' }}>
+
+        {/* Top sketch line */}
+        <img
+          src="/src/assets/images/above-images-sketch-line-mobile.svg"
+          alt=""
+          style={{ width: '100%', height: 'auto', display: 'block', position: 'relative', zIndex: 5, marginBottom: '-100px' }}
+        />
+
+        {/* Birthday image */}
+        <div style={{ position: 'relative', width: '100%', zIndex: 1 }}>
+          <img
+            src="/src/assets/images/birthday-image-mobile.png"
+            alt=""
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+          />
+          <p
+            style={{
+              position: 'absolute',
+              left: '267px',
+              top: '97px',
+              width: '103px',
+              fontSize: '12px',
+              fontFamily: 'var(--font-body)',
+              color: 'white',
+              lineHeight: '1.4',
+            }}
+          >
+            Hello! My name is Alexia Kouletsis. I grew up in Hershey, Pennsylvania. Since I was about this years old, art has consumed my life. Art has been and will always be my creative outlet, emotional comfort, and method of appreciating the beauty in world around me.
+          </p>
+        </div>
+
+        {/* Painting image */}
+        <div style={{ position: 'relative', width: '100%', zIndex: 2, marginTop: '-40px' }}>
+          <img
+            src="/src/assets/images/me-painting-image-mobile.png"
+            alt=""
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+          />
+          <p
+            style={{
+              position: 'absolute',
+              left: '170px',
+              top: '94px',
+              width: '204px',
+              fontSize: '12px',
+              fontFamily: 'var(--font-body)',
+              color: '#111E33',
+              lineHeight: '1.4',
+            }}
+          >
+            Somewhere along the way of the previous image to this one, I additionally fell in love with coding. I took my first computer science class as a Sophomore in high school. The act of breaking down problems, building them back up again, and improving upon them evoked the same emotions that putting paint on a blank canvas did—excitement for new opportunities.
+          </p>
+        </div>
+
+        {/* Graduating image */}
+        <div style={{ position: 'relative', width: '100%', zIndex: 3, marginTop: '-40px' }}>
+          <img
+            src="/src/assets/images/me-graduating-image-mobile.png"
+            alt=""
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+          />
+          <p
+            style={{
+              position: 'absolute',
+              left: '19px',
+              top: '25px',
+              width: '160px',
+              fontSize: '12px',
+              fontFamily: 'var(--font-body)',
+              color: '#111E33',
+              lineHeight: '1.4',
+            }}
+          >
+            I now aim to synthesize both art and technology into my life. I believe that disintegrating the boundaries between technology and other academic fields is essential for progression and perspective in any future innovations.
+          </p>
+          <p
+            style={{
+              position: 'absolute',
+              left: '251px',
+              top: '244px',
+              width: '122px',
+              fontSize: '12px',
+              fontFamily: 'var(--font-body)',
+              color: '#111E33',
+              lineHeight: '1.4',
+            }}
+          >
+            I view myself as an artist who uses technology as my paintbrush. Click anywhere below to see how I apply this philosophy throughout my various works!
+          </p>
+        </div>
+
+        {/* Bottom sketch line */}
+        <img
+          src="/src/assets/images/bellow-images-sketch-line-mobile.svg"
+          alt=""
+          style={{ width: '100%', height: 'auto', display: 'block', position: 'relative', zIndex: 4, marginTop: '-20px' }}
+        />
+      </section>
     </main>
   )
 }
