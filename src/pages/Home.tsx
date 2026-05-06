@@ -346,7 +346,7 @@ export default function Home() {
               lineHeight: '1.3',
             }}
           >
-            Hello! My name is Alexia Kouletsis. I grew up in Hershey, Pennsylvania. Since I was about this years old, art has consumed my life. Art has been and will always be my creative outlet, emotional comfort, and method of appreciating the beauty in world around me.
+            Hello! My name is Alexia Kouletsis. I grew up in Hershey, Pennsylvania. Since I was about nine years old, art has consumed my life. Art has been and will always be my creative outlet, emotional comfort, and method of appreciating the beauty in world around me.
           </p>
         </div>
 
