@@ -16,7 +16,7 @@
 }
 
 * {
-  cursor: url('./assets/cursor/pen-cursor.png'), auto;
+  cursor: url('./assets/cursor/pen-cursor.svg'), auto;
 }
 
 body {
