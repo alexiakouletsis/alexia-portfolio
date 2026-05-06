@@ -83,6 +83,99 @@ function SketchWithReveal({ src, alt, label, style, textRotation }: SketchProps)
   )
 }
 
+interface TileProps {
+  href: string
+  tile: string
+  popout1: string
+  popout2: string
+  label: string
+  size: number
+  mobileSize: number
+}
+
+function Tile({ href, tile, popout1, popout2, label, size, mobileSize }: TileProps) {
+  const [hovered, setHovered] = React.useState(false)
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth < 768)
+
+  React.useEffect(() => {
+    const handle = () => setIsMobile(window.innerWidth < 768)
+    window.addEventListener('resize', handle)
+    return () => window.removeEventListener('resize', handle)
+  }, [])
+
+  const currentSize = isMobile ? mobileSize : size
+
+  return (
+    <a
+      href={href}
+      className="flex flex-col items-center"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <div
+        className="relative"
+        style={{ width: `${currentSize}px`, height: `${currentSize}px`, overflow: 'visible' }}
+      >
+        {/* Popout left */}
+        <img
+          src={popout1}
+          alt=""
+          style={{
+            position: 'absolute',
+            width: '200px',
+            height: 'auto',
+            top: hovered ? '-100px' : '0px',
+            left: hovered ? '-80px' : '-20px',
+            opacity: hovered ? 1 : 0,
+            transition: 'top 500ms ease, left 500ms ease, opacity 500ms ease',
+            zIndex: 10,
+          }}
+        />
+        {/* Popout right */}
+        <img
+          src={popout2}
+          alt=""
+          style={{
+            position: 'absolute',
+            width: '200px',
+            height: 'auto',
+            top: hovered ? '-100px' : '0px',
+            right: hovered ? '-80px' : '-20px',
+            opacity: hovered ? 1 : 0,
+            transition: 'top 500ms ease, right 500ms ease, opacity 500ms ease',
+            zIndex: 10,
+          }}
+        />
+        {/* Tile on top */}
+        <img
+          src={tile}
+          alt={label}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            position: 'relative',
+            zIndex: 20,
+            outline: hovered ? '4px solid #111E33' : 'none',
+            transition: 'outline 300ms ease',
+          }}
+        />
+      </div>
+      <p
+        style={{
+          fontFamily: 'var(--font-display)',
+          fontSize: isMobile ? '18px' : '26px',
+          color: '#111E33',
+          marginTop: '16px',
+          textDecoration: hovered ? 'underline' : 'none',
+        }}
+      >
+        {label}
+      </p>
+    </a>
+  )
+}
+
 export default function Home() {
   return (
     <main>
@@ -421,9 +514,78 @@ export default function Home() {
         <img
           src="/src/assets/images/bellow-images-sketch-line-mobile.svg"
           alt=""
-          style={{ width: '100%', height: 'auto', display: 'block', position: 'relative', zIndex: 4, marginTop: '-20px' }}
+          style={{ width: '100%', height: 'auto', display: 'block', position: 'relative', zIndex: 4, marginTop: '-15px' }}
         />
       </section>
+      {/* RESUME + TILES SECTION */}
+      <section className="w-full px-4 md:px-10 pt-8 pb-0 max-w-[1440px] mx-auto">
+
+        {/* Resume download */}
+        <a
+          href="/src/assets/Alexia-Kouletsis-Resume.pdf"
+          download
+          className="flex md:inline-flex items-center gap-3 group mb-12 md:mb-20 justify-center md:justify-start"
+        >
+          <img
+            src="/src/assets/images/sun-icon.svg"
+            alt=""
+            className="transition-transform duration-300 group-hover:scale-110"
+            style={{ width: '60px', height: '60px' }}
+          />
+          <span
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: '18px',
+              color: '#111E33',
+              lineHeight: '1.1',
+            }}
+            className="group-hover:underline md:text-[28px]"
+          >
+            CLICK TO DOWNLOAD MY RESUME
+          </span>
+        </a>
+
+        {/* Tiles - desktop 2x2, mobile 1 column */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-16 md:gap-y-38 justify-items-center">
+          <Tile
+            href="/projects"
+            tile="/src/assets/images/projects-tile.png"
+            popout1="/src/assets/images/projects-popout-image-1.png"
+            popout2="/src/assets/images/projects-popout-image-2.png"
+            label="PROJECTS"
+            size={320}
+            mobileSize={220}
+          />
+          <Tile
+            href="/research"
+            tile="/src/assets/images/research-tile.png"
+            popout1="/src/assets/images/research-popout-image-1.png"
+            popout2="/src/assets/images/research-popout-image-2.png"
+            label="RESEARCH"
+            mobileSize={220}
+            size={330}
+          />
+          <Tile
+            href="/art-gallery"
+            tile="/src/assets/images/art-gallery-tile.png"
+            popout1="/src/assets/images/art-popout-image-1.png"
+            popout2="/src/assets/images/art-popout-image-2.png"
+            label="ART GALLERY"
+            size={320}
+            mobileSize={220}
+          />
+          <Tile
+            href="/etc"
+            tile="/src/assets/images/more-tile.png"
+            popout1="/src/assets/images/more-popout-image-1.png"
+            popout2="/src/assets/images/more-popout-image-2.png"
+            label="& MORE"
+            size={320}
+            mobileSize={220}
+          />
+        </div>
+      </section>
+    
     </main>
   )
 }
