@@ -185,61 +185,61 @@ export default function Home() {
         style={{ height: '1812px', maxWidth: '1440px', margin: '0 auto' }}
       >
         <img
-          src="/src/assets/images/hero-logo.svg"
+          src="/assets/images/hero-logo.svg"
           alt="Alexia Rae Kouletsis - Art, Tech, Design, and Optimism"
           style={{ position: 'absolute', left: '70px', top: '37px', width: '965.62px', height: '532px' }}
         />
         <SketchWithReveal
-          src="/src/assets/images/standing-portrait-sketch.svg"
+          src="/assets/images/standing-portrait-sketch.svg"
           alt=""
           label="Me!"
           style={{ left: '930px', top: '74px', width: '471px', height: '863px' }}
         />
         <SketchWithReveal
-          src="/src/assets/images/strawberry-sketch.svg"
+          src="/assets/images/strawberry-sketch.svg"
           alt=""
           label="Favorite food"
           style={{ left: '320px', top: '523px', width: '187px', height: '186px' }}
         />
         <SketchWithReveal
-          src="/src/assets/images/9-cake-sketch.svg"
+          src="/assets/images/9-cake-sketch.svg"
           alt=""
           label="My 9th birthday"
           style={{ left: '-13px', top: '533px', width: '334px', height: '384.01px' }}
         />
         <SketchWithReveal
-          src="/src/assets/images/with-pap-sketch.svg"
+          src="/assets/images/with-pap-sketch.svg"
           alt=""
           label="My pap hugging me after my first black belt test"
           style={{ left: '563px', top: '485px', width: '353px', height: '559px' }}
         />
         <SketchWithReveal
-          src="/src/assets/images/with-dad-sketch.svg"
+          src="/assets/images/with-dad-sketch.svg"
           alt=""
           label="My dad and I at the beach in 2013"
           style={{ left: '-2px', top: '921px', width: '632px', height: '538px' }}
         />
         <SketchWithReveal
-          src="/src/assets/images/carnation-sketch.svg"
+          src="/assets/images/carnation-sketch.svg"
           alt=""
           label="Favorite flower"
           textRotation="-10deg"
           style={{ left: '29px', top: '1498px', width: '504.33px', height: '249.15px', transform: 'rotate(10deg)' }}
         />
         <SketchWithReveal
-          src="/src/assets/images/with-mom-sketch.svg"
+          src="/assets/images/with-mom-sketch.svg"
           alt=""
           label="My mom, sister, and I hiking in 2015"
           style={{ left: '629px', top: '1094px', width: '831px', height: '718px' }}
         />
         <SketchWithReveal
-          src="/src/assets/images/dragonfly-sketch.svg"
+          src="/assets/images/dragonfly-sketch.svg"
           alt=""
           label="Favorite animal"
           style={{ left: '1129px', top: '945px', width: '297px', height: '236px' }}
         />
         <SketchWithReveal
-          src="/src/assets/images/ak-logo-sketch.svg"
+          src="/assets/images/ak-logo-sketch.svg"
           alt=""
           label="Logo!"
           style={{ left: '660px', top: '1089px', width: '189px', height: '176px' }}
@@ -253,32 +253,32 @@ export default function Home() {
       >
         <div className="absolute inset-0">
           <img
-            src="/src/assets/images/hero-logo.svg"
+            src="/assets/images/hero-logo.svg"
             alt="Alexia Rae Kouletsis - Art, Tech, Design, and Optimism"
             style={{ position: 'absolute', left: '6.67%', top: '3.76%', width: '94.91%', height: '18.61%' }}
           />
           <img
-            src="/src/assets/images/standing-portrait-sketch.svg"
+            src="/assets/images/standing-portrait-sketch.svg"
             alt=""
             style={{ position: 'absolute', left: '43.59%', top: '18.99%', width: '59.74%', height: '41.27%' }}
           />
           <img
-            src="/src/assets/images/strawberry-sketch.svg"
+            src="/assets/images/strawberry-sketch.svg"
             alt=""
             style={{ position: 'absolute', left: '37.44%', top: '19.38%', width: '23.59%', height: '8.78%' }}
           />
           <img
-            src="/src/assets/images/9-cake-sketch.svg"
+            src="/assets/images/9-cake-sketch.svg"
             alt=""
             style={{ position: 'absolute', left: '-3.08%', top: '19.86%', width: '43.85%', height: '19.0%' }}
           />
           <img
-            src="/src/assets/images/ak-logo-sketch.svg"
+            src="/assets/images/ak-logo-sketch.svg"
             alt=""
             style={{ position: 'absolute', left: '22.31%', top: '39.63%', width: '17.69%', height: '6.17%' }}
           />
           <img
-            src="/src/assets/images/with-pap-sketch.svg"
+            src="/assets/images/with-pap-sketch.svg"
             alt=""
             style={{ position: 'absolute', left: '-7.18%', top: '46.19%', width: '52.56%', height: '31.24%' }}
           />
@@ -297,12 +297,12 @@ export default function Home() {
             Check my website out on desktop for more sketches + features!
           </p>
           <img
-            src="/src/assets/images/dragonfly-sketch-mobile.svg"
+            src="/assets/images/dragonfly-sketch-mobile.svg"
             alt=""
             style={{ position: 'absolute', left: '-1.52%', top: '79.36%', width: '30.62%', height: '9.16%' }}
           />
           <img
-            src="/src/assets/images/with-mom-sketch-mobile.svg"
+            src="/assets/images/with-mom-sketch-mobile.svg"
             alt=""
             style={{ position: 'absolute', left: '32.31%', top: '72.61%', width: '67.69%', height: '27.48%' }}
           />
@@ -313,7 +313,7 @@ export default function Home() {
 
         {/* Top sketch line */}
         <img
-          src="/src/assets/images/above-images-sketch-line.svg"
+          src="/assets/images/above-images-sketch-line.svg"
           alt=""
           style={{
             width: '100%',
@@ -329,7 +329,7 @@ export default function Home() {
         {/* Birthday image */}
         <div style={{ position: 'relative', width: '100%', zIndex: 1 }}>
           <img
-            src="/src/assets/images/birthday-image.png"
+            src="/assets/images/birthday-image.png"
             alt=""
             style={{ width: '100%', height: 'auto', display: 'block' }}
           />
@@ -352,7 +352,7 @@ export default function Home() {
         {/* Painting image */}
         <div style={{ position: 'relative', width: '100%', zIndex: 2, marginTop: '-250px' }}>
           <img
-            src="/src/assets/images/me-painting-image.png"
+            src="/assets/images/me-painting-image.png"
             alt=""
             style={{ width: '100%', height: 'auto', display: 'block' }}
           />
@@ -375,7 +375,7 @@ export default function Home() {
         {/* Graduating image */}
         <div style={{ position: 'relative', width: '100%', zIndex: 3, marginTop: '-200px' }}>
           <img
-            src="/src/assets/images/me-graduating-image.png"
+            src="/assets/images/me-graduating-image.png"
             alt=""
             style={{ width: '100%', height: 'auto', display: 'block' }}
           />
@@ -411,7 +411,7 @@ export default function Home() {
 
         {/* Bottom sketch line */}
         <img
-          src="/src/assets/images/bellow-images-sketch-line.svg"
+          src="/assets/images/bellow-images-sketch-line.svg"
           alt=""
           style={{ width: '100%', height: '64.17px', display: 'block', position: 'relative', zIndex: 4, marginTop: '-40px' }}
         />
@@ -422,7 +422,7 @@ export default function Home() {
 
         {/* Top sketch line */}
         <img
-          src="/src/assets/images/above-images-sketch-line-mobile.svg"
+          src="/assets/images/above-images-sketch-line-mobile.svg"
           alt=""
           style={{ width: '100%', height: 'auto', display: 'block', position: 'relative', zIndex: 5, marginBottom: '-100px' }}
         />
@@ -430,7 +430,7 @@ export default function Home() {
         {/* Birthday image */}
         <div style={{ position: 'relative', width: '100%', zIndex: 1 }}>
           <img
-            src="/src/assets/images/birthday-image-mobile.png"
+            src="/assets/images/birthday-image-mobile.png"
             alt=""
             style={{ width: '100%', height: 'auto', display: 'block' }}
           />
@@ -453,7 +453,7 @@ export default function Home() {
         {/* Painting image */}
         <div style={{ position: 'relative', width: '100%', zIndex: 2, marginTop: '-40px' }}>
           <img
-            src="/src/assets/images/me-painting-image-mobile.png"
+            src="/assets/images/me-painting-image-mobile.png"
             alt=""
             style={{ width: '100%', height: 'auto', display: 'block' }}
           />
@@ -476,7 +476,7 @@ export default function Home() {
         {/* Graduating image */}
         <div style={{ position: 'relative', width: '100%', zIndex: 3, marginTop: '-40px' }}>
           <img
-            src="/src/assets/images/me-graduating-image-mobile.png"
+            src="/assets/images/me-graduating-image-mobile.png"
             alt=""
             style={{ width: '100%', height: 'auto', display: 'block' }}
           />
@@ -512,7 +512,7 @@ export default function Home() {
 
         {/* Bottom sketch line */}
         <img
-          src="/src/assets/images/bellow-images-sketch-line-mobile.svg"
+          src="/assets/images/bellow-images-sketch-line-mobile.svg"
           alt=""
           style={{ width: '100%', height: 'auto', display: 'block', position: 'relative', zIndex: 4, marginTop: '-15px' }}
         />
@@ -522,12 +522,12 @@ export default function Home() {
 
         {/* Resume download */}
         <a
-          href="/src/assets/Alexia-Kouletsis-Resume.pdf"
+          href="/assets/Alexia-Kouletsis-Resume.pdf"
           download
           className="flex md:inline-flex items-center gap-3 group mb-12 md:mb-20 justify-center md:justify-start"
         >
           <img
-            src="/src/assets/images/sun-icon.svg"
+            src="/assets/images/sun-icon.svg"
             alt=""
             className="transition-transform duration-300 group-hover:scale-110"
             style={{ width: '60px', height: '60px' }}
@@ -549,36 +549,36 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-16 md:gap-y-38 justify-items-center">
           <Tile
             href="/projects"
-            tile="/src/assets/images/projects-tile.png"
-            popout1="/src/assets/images/projects-popout-image-1.png"
-            popout2="/src/assets/images/projects-popout-image-2.png"
+            tile="/assets/images/projects-tile.png"
+            popout1="/assets/images/projects-popout-image-1.png"
+            popout2="/assets/images/projects-popout-image-2.png"
             label="PROJECTS"
             size={320}
             mobileSize={220}
           />
           <Tile
             href="/research"
-            tile="/src/assets/images/research-tile.png"
-            popout1="/src/assets/images/research-popout-image-1.png"
-            popout2="/src/assets/images/research-popout-image-2.png"
+            tile="/assets/images/research-tile.png"
+            popout1="/assets/images/research-popout-image-1.png"
+            popout2="/assets/images/research-popout-image-2.png"
             label="RESEARCH"
             mobileSize={220}
             size={330}
           />
           <Tile
             href="/art-gallery"
-            tile="/src/assets/images/art-gallery-tile.png"
-            popout1="/src/assets/images/art-popout-image-1.png"
-            popout2="/src/assets/images/art-popout-image-2.png"
+            tile="/assets/images/art-gallery-tile.png"
+            popout1="/assets/images/art-popout-image-1.png"
+            popout2="/assets/images/art-popout-image-2.png"
             label="ART GALLERY"
             size={320}
             mobileSize={220}
           />
           <Tile
             href="/etc"
-            tile="/src/assets/images/more-tile.png"
-            popout1="/src/assets/images/more-popout-image-1.png"
-            popout2="/src/assets/images/more-popout-image-2.png"
+            tile="/assets/images/more-tile.png"
+            popout1="/assets/images/more-popout-image-1.png"
+            popout2="/assets/images/more-popout-image-2.png"
             label="& MORE"
             size={320}
             mobileSize={220}

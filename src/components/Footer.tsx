@@ -4,12 +4,12 @@ export default function Footer() {
       {/* Divider line */}
       <div className="w-full px-10">
         <img
-          src="/src/assets/images/footer-line-desktop.svg"
+          src="/assets/images/footer-line-desktop.svg"
           alt=""
           className="hidden md:block w-full"
         />
         <img
-          src="/src/assets/images/footer-line-mobile.svg"
+          src="/assets/images/footer-line-mobile.svg"
           alt=""
           className="md:hidden w-full"
         />
@@ -24,7 +24,7 @@ export default function Footer() {
           className="transition-transform duration-300 hover:scale-110"
         >
           <img
-            src="/src/assets/images/linkedin-icon.svg"
+            src="/assets/images/linkedin-icon.svg"
             alt="LinkedIn"
             className="w-[42px] h-[42px] md:w-[74px] md:h-[74px]"
           />
@@ -37,7 +37,7 @@ export default function Footer() {
           className="transition-transform duration-300 hover:scale-110"
         >
           <img
-            src="/src/assets/images/github-icon.svg"
+            src="/assets/images/github-icon.svg"
             alt="GitHub"
             className="w-[42px] h-[42px] md:w-[74px] md:h-[74px]"
           />
@@ -48,7 +48,7 @@ export default function Footer() {
           className="transition-transform duration-300 hover:scale-110"
         >
           <img
-            src="/src/assets/images/email-icon.svg"
+            src="/assets/images/email-icon.svg"
             alt="Email"
             className="w-[42px] h-[42px] md:w-[74px] md:h-[74px]"
           />

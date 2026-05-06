@@ -32,7 +32,7 @@ export default function Navbar() {
               `}
             >
               <img
-                src={`/src/assets/images/${link.underline}`}
+                src={`/assets/images/${link.underline}`}
                 alt=""
                 className="w-full h-full"
               />
@@ -48,7 +48,7 @@ export default function Navbar() {
           aria-label="Open menu"
         >
           <img
-            src="/src/assets/images/mobile-navbar-hamburger.svg"
+            src="/assets/images/mobile-navbar-hamburger.svg"
             alt="Open menu"
             className="w-8 h-8"
           />
@@ -62,7 +62,7 @@ export default function Navbar() {
           transition-opacity duration-500
           ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}
         `}
-        style={{ backgroundImage: "url('/src/assets/images/bg-texture.png')" }}
+        style={{ backgroundImage: "url('/assets/images/bg-texture.png')" }}
       >
         <button
           onClick={() => setMenuOpen(false)}
@@ -70,7 +70,7 @@ export default function Navbar() {
           aria-label="Close menu"
         >
           <img
-            src="/src/assets/images/x-out-navbar-mobile.svg"
+            src="/assets/images/x-out-navbar-mobile.svg"
             alt="Close menu"
             className="w-8 h-8"
           />
