@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import React, { useRef } from 'react'
 
 interface SketchProps {
@@ -106,8 +107,8 @@ function Tile({ href, tile, popout1, popout2, label, size, mobileSize }: TilePro
   const currentSize = isMobile ? mobileSize : size
 
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       className="flex flex-col items-center"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -172,7 +173,7 @@ function Tile({ href, tile, popout1, popout2, label, size, mobileSize }: TilePro
       >
         {label}
       </p>
-    </a>
+    </Link>
   )
 }
 
