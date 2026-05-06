@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="w-full mt-20">
+    <footer className="w-full mt-8">
       {/* Divider line */}
       <div className="w-full px-10">
         <img

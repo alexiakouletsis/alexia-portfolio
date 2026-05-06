@@ -6,12 +6,12 @@ import Projects from './pages/Projects'
 import Research from './pages/Research'
 import ArtGallery from './pages/ArtGallery'
 import Etc from './pages/Etc'
-import Project1 from './pages/design/Project1'
-import Project2 from './pages/design/Project2'
-import Project3 from './pages/design/Project3'
-import Project4 from './pages/design/Project4'
-import Project5 from './pages/design/Project5'
-import Project6 from './pages/design/Project6'
+import Goodkarma from './pages/design/Goodkarma'
+import PawPal from './pages/design/PawPal'
+import Boston826 from './pages/design/Boston826'
+import BraveNewWorld from './pages/design/BraveNewWorld'
+import RomeBrochure from './pages/design/RomeBrochure'
+import Semester01 from './pages/design/Semester01'
 
 function App() {
   return (
@@ -24,12 +24,12 @@ function App() {
           <Route path="/research" element={<Research />} />
           <Route path="/art-gallery" element={<ArtGallery />} />
           <Route path="/etc" element={<Etc />} />
-          <Route path="/projects/design/1" element={<Project1 />} />
-          <Route path="/projects/design/2" element={<Project2 />} />
-          <Route path="/projects/design/3" element={<Project3 />} />
-          <Route path="/projects/design/4" element={<Project4 />} />
-          <Route path="/projects/design/5" element={<Project5 />} />
-          <Route path="/projects/design/6" element={<Project6 />} />
+          <Route path="/projects/design/Goodkarma" element={<Goodkarma />} />
+          <Route path="/projects/design/PawPal" element={<PawPal />} />
+          <Route path="/projects/design/826-Boston" element={<Boston826 />} />
+          <Route path="/projects/design/BraveNewWorld" element={<BraveNewWorld />} />
+          <Route path="/projects/design/RomeBrochure" element={<RomeBrochure />} />
+          <Route path="/projects/design/Semester-01" element={<Semester01 />} />
         </Routes>
       </main>
       <Footer />
