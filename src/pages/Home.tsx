@@ -530,24 +530,22 @@ export default function Home() {
           <img
             src="/assets/images/sun-icon.svg"
             alt=""
-            className="transition-transform duration-300 group-hover:scale-110"
-            style={{ width: '60px', height: '60px' }}
+            className="transition-transform duration-300 group-hover:scale-110 w-[60px] h-[60px] md:w-[168px] md:h-[163px]"
           />
           <span
             style={{
               fontFamily: 'var(--font-display)',
-              fontSize: '18px',
               color: '#111E33',
               lineHeight: '1.1',
             }}
-            className="group-hover:underline md:text-[28px]"
+            className="group-hover:underline text-[18px] md:text-[28px]"
           >
             CLICK TO DOWNLOAD MY RESUME
           </span>
         </a>
 
         {/* Tiles - desktop 2x2, mobile 1 column */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-16 md:gap-y-38 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-0 gap-y-16 md:gap-y-38 justify-items-center">
           <Tile
             href="/projects"
             tile="/assets/images/projects-tile.png"
