@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const designProjects = [
   { label: 'Goodkarma', image: '/assets/images/goodkarma-button.png', path: '/projects/design/Goodkarma' },
   { label: 'PawPal', image: '/assets/images/pawpal-button.png', path: '/projects/design/PawPal' },
-  { label: '826 Boston', image: '/assets/images/826-button.png', path: '/projects/design/826Boston' },
+  { label: '826 Boston', image: '/assets/images/826-button.png', path: '/projects/design/Boston826' },
   { label: 'Brave New World', image: '/assets/images/brave-new-world-button.png', path: '/projects/design/BraveNewWorld' },
   { label: 'Rome Brochure', image: '/assets/images/rome-button.png', path: '/projects/design/RomeBrochure' },
   { label: 'Semester 01', image: '/assets/images/sem01-button.png', path: '/projects/design/Semester01' },

@@ -26,7 +26,7 @@ function App() {
           <Route path="/etc" element={<Etc />} />
           <Route path="/projects/design/Goodkarma" element={<Goodkarma />} />
           <Route path="/projects/design/PawPal" element={<PawPal />} />
-          <Route path="/projects/design/826-Boston" element={<Boston826 />} />
+          <Route path="/projects/design/Boston826" element={<Boston826 />} />
           <Route path="/projects/design/BraveNewWorld" element={<BraveNewWorld />} />
           <Route path="/projects/design/RomeBrochure" element={<RomeBrochure />} />
           <Route path="/projects/design/Semester-01" element={<Semester01 />} />
