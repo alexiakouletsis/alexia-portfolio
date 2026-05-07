@@ -201,6 +201,12 @@ export default function ArtGallery() {
           {/* Row 9: full width */}
           <Painting src="/assets/images/beach-painting.png" alt="Beach painting" />
 
+          {/* Row 10: 2-col */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+            <Painting src="/assets/images/hexagon-painting.png" alt="Hexagon painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/guts-corset-painting.png" alt="Guts corset painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+          </div>
+
         </div>
 
         {/* Thanks text */}
