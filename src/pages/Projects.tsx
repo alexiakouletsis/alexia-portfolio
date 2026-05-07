@@ -182,7 +182,6 @@ function TabButton({ label, active, onClick }: { label: string; active: boolean;
         background: 'none',
         border: 'none',
         padding: '8px 20px',
-        cursor: 'inherit',
         minWidth: 'clamp(120px, 25vw, 180px)',
       }}
     >

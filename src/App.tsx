@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import Cursor from './components/Cursor'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Research from './pages/Research'
@@ -17,7 +16,6 @@ import Semester01 from './pages/design/Semester01'
 function App() {
   return (
     <BrowserRouter>
-      <Cursor />
       <Navbar />
       <main>
         <Routes>
