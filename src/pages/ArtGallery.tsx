@@ -63,9 +63,9 @@ export default function ArtGallery() {
           />
         </div>
       )}
-      <main className="w-full max-w-[1440px] mx-auto px-8 md:px-16 py-12">
 
-        {/* Title */}
+      {/* Title + subtitle inside padded container */}
+      <div className="w-full max-w-[1440px] mx-auto px-8 md:px-16 pt-12">
         <h1
           style={{
             fontFamily: 'var(--font-display)',
@@ -78,8 +78,6 @@ export default function ArtGallery() {
         >
           ART<br />GALLERY
         </h1>
-
-        {/* Subtitle */}
         <p
           className="text-[14px] md:text-[20px]"
           style={{
@@ -98,18 +96,17 @@ export default function ArtGallery() {
           </a>
           {' '}about any of my pieces or exhibits.
         </p>
+      </div>
 
-        {/* Exhibit hero photo */}
-        <img
-          src="/assets/images/all-paintings.png"
-          alt="Art exhibit display"
-          style={{
-            width: '100%',
-            objectFit: 'cover',
-            display: 'block',
-            marginBottom: '64px',
-          }}
-        />
+      {/* Exhibit hero photo — full bleed */}
+      <img
+        src="/assets/images/all-paintings.png"
+        alt="Art exhibit display"
+        className="w-full"
+        style={{ display: 'block', marginBottom: '64px' }}
+      />
+
+      <main className="w-full max-w-[1440px] mx-auto px-8 md:px-16 pb-12">
 
         {/* Instagram embeds */}
         <div
@@ -222,10 +219,6 @@ export default function ArtGallery() {
         >
           Thanks for making it all the way down :)
         </p>
-
-        {/* Separator */}
-        <img src="/assets/images/line-separator.svg" alt="" className="hidden md:block w-full" style={{ marginBottom: '32px' }} />
-        <img src="/assets/images/line-separator-mobile.svg" alt="" className="md:hidden w-full" style={{ marginBottom: '24px' }} />
 
       </main>
     </>
