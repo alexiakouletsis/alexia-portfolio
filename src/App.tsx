@@ -17,7 +17,7 @@ import { useEffect } from 'react'
 function App() {
   useEffect(() => {
   const handleMouseEnter = () => {
-    document.body.style.cursor = `url('/assets/cursor/pen-cursor.svg'), auto`
+    document.body.style.cursor = `url('/assets/cursor/pen-cursor.svg') 0 0, auto`
   }
   window.addEventListener('mouseenter', handleMouseEnter)
   return () => window.removeEventListener('mouseenter', handleMouseEnter)
