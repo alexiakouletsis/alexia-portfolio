@@ -19,11 +19,17 @@ export default function ArtGallery() {
     }
   }, [])
 
-  const Painting = ({ src, alt, style = {} }: { src: string; alt: string; style?: React.CSSProperties }) => (
+  const Painting = ({ src, alt, style = {}, loading = 'lazy' }: { 
+  src: string
+  alt: string
+  style?: React.CSSProperties
+  loading?: 'lazy' | 'eager'
+  }) => (
     <img
       src={src}
       alt={alt}
       onClick={() => setLightbox(src)}
+      loading={loading}
       style={{
         width: '100%',
         display: 'block',

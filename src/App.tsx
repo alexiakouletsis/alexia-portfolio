@@ -12,8 +12,16 @@ import Boston826 from './pages/design/Boston826'
 import BraveNewWorld from './pages/design/BraveNewWorld'
 import RomeBrochure from './pages/design/RomeBrochure'
 import Semester01 from './pages/design/Semester01'
+import { useEffect } from 'react'
 
 function App() {
+  useEffect(() => {
+  const handleMouseEnter = () => {
+    document.body.style.cursor = `url('/assets/cursor/pen-cursor.svg'), auto`
+  }
+  window.addEventListener('mouseenter', handleMouseEnter)
+  return () => window.removeEventListener('mouseenter', handleMouseEnter)
+}, [])
   return (
     <BrowserRouter>
       <Navbar />

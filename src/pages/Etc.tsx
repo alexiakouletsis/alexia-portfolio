@@ -71,11 +71,13 @@ export default function Etc() {
           <img
             src="/assets/images/all-tkd-images-desktop.png"
             alt="Taekwondo photos"
+            loading="lazy"
             className="hidden md:block w-full"
           />
           <img
             src="/assets/images/all-tkd-images-mobile.png"
             alt="Taekwondo photos"
+            loading="lazy"
             className="md:hidden w-full"
           />
         </section>
@@ -120,11 +122,13 @@ export default function Etc() {
           <img
             src="/assets/images/all-bjj-images-desktop.png"
             alt="Brazilian Jiu-Jitsu photos"
+            loading="lazy"
             className="hidden md:block w-full"
           />
           <img
             src="/assets/images/all-bjj-images-mobile.png"
             alt="Brazilian Jiu-Jitsu photos"
+            loading="lazy"
             className="md:hidden w-full"
           />
         </section>
@@ -156,6 +160,7 @@ export default function Etc() {
               <img
                 src="/assets/images/travel-images-row1.png"
                 alt="Baños Ecuador, Castellammare del Golfo, Milan Italy"
+                loading="lazy"
                 style={{ width: '100%', display: 'block' }}
               />
               <div
@@ -181,6 +186,7 @@ export default function Etc() {
               <img
                 src="/assets/images/travel-images-row2.png"
                 alt="Acropolis of Athens, Florence Italy"
+                loading="lazy"
                 style={{ width: '100%', display: 'block' }}
               />
               <div
@@ -205,6 +211,7 @@ export default function Etc() {
               <img
                 src="/assets/images/travel-images-row3.png"
                 alt="Rome Italy, Paris France"
+                loading="lazy"
                 style={{ width: '100%', display: 'block' }}
               />
               <div
@@ -229,6 +236,7 @@ export default function Etc() {
               <img
                 src="/assets/images/travel-images-row4.png"
                 alt="Barcelona Spain, Lake Como Italy, Vienna Austria"
+                loading="lazy"
                 style={{ width: '100%', display: 'block' }}
               />
               <div
