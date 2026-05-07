@@ -87,7 +87,7 @@ export default function Semester01() {
         {/* Download link */}
         <div className="flex justify-center mb-16">
           <a
-            href="/assets/images/Alexia-Kouletsis-Semester-1-Final.pdf"
+            href="/assets/images/Alexia-Kouletsis-Semester-1-Final_compressed.pdf"
             download
             style={{
               fontFamily: 'var(--font-body)',
@@ -106,7 +106,7 @@ export default function Semester01() {
 
         {/* Embedded PDF */}
         <iframe
-          src="/assets/images/Alexia-Kouletsis-Semester-1-Final.pdf"
+          src="/assets/images/Alexia-Kouletsis-Semester-1-Final_compressed.pdf"
           className="w-full mb-16"
           style={{ height: '800px', border: 'none' }}
           title="Semester 01 PDF"
