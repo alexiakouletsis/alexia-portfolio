@@ -10,17 +10,20 @@ export default function ArtGallery() {
   }, [])
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const loadInstagram = () => {
+      const existing = document.querySelector('script[src="https://www.instagram.com/embed.js"]')
+      if (existing) return
       const script = document.createElement('script')
       script.src = 'https://www.instagram.com/embed.js'
       script.async = true
       document.body.appendChild(script)
-    }, 3000)
+    }
 
-    return () => {
-      clearTimeout(timer)
-      const existing = document.querySelector('script[src="https://www.instagram.com/embed.js"]')
-      if (existing) document.body.removeChild(existing)
+    if (document.readyState === 'complete') {
+      loadInstagram()
+    } else {
+      window.addEventListener('load', loadInstagram)
+      return () => window.removeEventListener('load', loadInstagram)
     }
   }, [])
 
