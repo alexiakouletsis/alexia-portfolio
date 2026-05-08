@@ -145,11 +145,13 @@ function MobileTapReveal({ src, alt, label, style }: {
       setTapped(true)
     }, 800)
     setTimeout(() => {
+      if (turbRef.current) turbRef.current.setAttribute('baseFrequency', '0')
+      if (dispRef.current) dispRef.current.setAttribute('scale', '0')
+      progressRef.current = 0
+      if (animRef.current) cancelAnimationFrame(animRef.current)
       setTapped(false)
-      animateTo(0)
-    }, 2900)
+    }, 2300)
   }
-
   return (
     <div
       style={{ ...style, position: 'absolute', touchAction: 'manipulation' }}
