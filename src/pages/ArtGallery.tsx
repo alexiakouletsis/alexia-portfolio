@@ -175,6 +175,18 @@ export default function ArtGallery() {
           />
         </div>
 
+        <p
+          className="text-[14px] md:text-[20px]"
+          style={{
+            fontFamily: 'var(--font-body)',
+            color: '#111E33',
+            marginBottom: '48px',
+            textAlign: 'center',
+          }}
+        >
+          Try clicking on a piece!
+        </p>
+
         {/* Gallery grid */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
 
