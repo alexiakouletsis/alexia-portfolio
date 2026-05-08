@@ -139,12 +139,15 @@ function MobileTapReveal({ src, alt, label, style }: {
   }
 
   const handleTap = () => {
-    setTapped(true)
+    if (tapped) return
     animateTo(1)
+    setTimeout(() => {
+      setTapped(true)
+    }, 800)
     setTimeout(() => {
       setTapped(false)
       animateTo(0)
-    }, 2000)
+    }, 2900)
   }
 
   return (
@@ -322,7 +325,7 @@ export default function Home() {
         <SketchWithReveal src="/assets/images/standing-portrait-sketch.svg" alt="" label="Me!" style={{ left: '930px', top: '74px', width: '471px', height: '863px' }} />
         <SketchWithReveal src="/assets/images/strawberry-sketch.svg" alt="" label="Favorite food" style={{ left: '320px', top: '523px', width: '187px', height: '186px' }} />
         <SketchWithReveal src="/assets/images/9-cake-sketch.svg" alt="" label="My 9th birthday" style={{ left: '-13px', top: '533px', width: '334px', height: '384.01px' }} />
-        <SketchWithReveal src="/assets/images/with-pap-sketch.svg" alt="" label="My pap hugging me after my first black belt test" style={{ left: '563px', top: '485px', width: '353px', height: '559px' }} />
+        <SketchWithReveal src="/assets/images/with-pap-sketch.svg" alt="" label="My Pap hugging me after my first black belt test" style={{ left: '563px', top: '485px', width: '353px', height: '559px' }} />
         <SketchWithReveal src="/assets/images/with-dad-sketch.svg" alt="" label="My dad and I at the beach in 2013" style={{ left: '-2px', top: '921px', width: '632px', height: '538px' }} />
         <SketchWithReveal src="/assets/images/carnation-sketch.svg" alt="" label="Favorite flower" textRotation="-10deg" style={{ left: '29px', top: '1498px', width: '504.33px', height: '249.15px', transform: 'rotate(10deg)' }} />
         <SketchWithReveal src="/assets/images/with-mom-sketch.svg" alt="" label="My mom, sister, and I hiking in 2015" style={{ left: '629px', top: '1094px', width: '831px', height: '718px' }} />
@@ -368,7 +371,7 @@ export default function Home() {
           <MobileTapReveal
             src="/assets/images/with-pap-sketch.svg"
             alt=""
-            label="My pap hugging me after my first black belt test"
+            label="Hugging Pap after black belt test"
             style={{ left: '-7.18%', top: '46.19%', width: '52.56%', height: '31.24%' }}
           />
           <p
