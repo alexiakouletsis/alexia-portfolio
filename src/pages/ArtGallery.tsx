@@ -10,20 +10,25 @@ export default function ArtGallery() {
   }, [])
 
   useEffect(() => {
-    const script = document.createElement('script')
-    script.src = 'https://www.instagram.com/embed.js'
-    script.async = true
-    document.body.appendChild(script)
+    const timer = setTimeout(() => {
+      const script = document.createElement('script')
+      script.src = 'https://www.instagram.com/embed.js'
+      script.async = true
+      document.body.appendChild(script)
+    }, 1000)
+
     return () => {
-      document.body.removeChild(script)
+      clearTimeout(timer)
+      const existing = document.querySelector('script[src="https://www.instagram.com/embed.js"]')
+      if (existing) document.body.removeChild(existing)
     }
   }, [])
 
-  const Painting = ({ src, alt, style = {}, loading = 'lazy' }: { 
-  src: string
-  alt: string
-  style?: React.CSSProperties
-  loading?: 'lazy' | 'eager'
+  const Painting = ({ src, alt, style = {}, loading = 'lazy' }: {
+    src: string
+    alt: string
+    style?: React.CSSProperties
+    loading?: 'lazy' | 'eager'
   }) => (
     <img
       src={src}
@@ -119,7 +124,6 @@ export default function ArtGallery() {
           className="flex flex-col md:flex-row justify-center items-start"
           style={{ gap: '32px', marginBottom: '72px' }}
         >
-          {/* Post 1: lower_dauphin */}
           <blockquote
             className="instagram-media"
             data-instgrm-permalink="https://www.instagram.com/p/DLVrQTzRsiR/?utm_source=ig_embed&utm_campaign=loading"
@@ -136,8 +140,6 @@ export default function ArtGallery() {
               width: '100%',
             }}
           />
-
-          {/* Post 2: senatorpattykim */}
           <blockquote
             className="instagram-media"
             data-instgrm-permalink="https://www.instagram.com/p/DFsq6XaxLWS/?utm_source=ig_embed&utm_campaign=loading"
@@ -161,8 +163,8 @@ export default function ArtGallery() {
 
           {/* Row 1: 2-col */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Painting src="/assets/images/madame-x-portrait.png" alt="Madame X portrait" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-            <Painting src="/assets/images/club-dj.png" alt="Club DJ painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/madame-x-portrait.png" alt="Madame X portrait" loading="eager" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/club-dj.png" alt="Club DJ painting" loading="eager" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
           {/* Row 2: 2-col */}
