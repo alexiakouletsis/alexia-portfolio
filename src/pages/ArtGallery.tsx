@@ -1,5 +1,15 @@
 import { useEffect, useState } from 'react'
 
+declare global {
+  interface Window {
+    instgrm?: {
+      Embeds: {
+        process: () => void
+      }
+    }
+  }
+}
+
 export default function ArtGallery() {
   const [lightbox, setLightbox] = useState<string | null>(null)
 
@@ -11,12 +21,16 @@ export default function ArtGallery() {
 
   useEffect(() => {
     const loadInstagram = () => {
-      const existing = document.querySelector('script[src="https://www.instagram.com/embed.js"]')
-      if (existing) return
-      const script = document.createElement('script')
-      script.src = 'https://www.instagram.com/embed.js'
-      script.async = true
-      document.body.appendChild(script)
+      if (window.instgrm) {
+        window.instgrm.Embeds.process()
+      } else {
+        const existing = document.querySelector('script[src="https://www.instagram.com/embed.js"]')
+        if (existing) return
+        const script = document.createElement('script')
+        script.src = 'https://www.instagram.com/embed.js'
+        script.async = true
+        document.body.appendChild(script)
+      }
     }
 
     if (document.readyState === 'complete') {
@@ -164,52 +178,41 @@ export default function ArtGallery() {
         {/* Gallery grid */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
 
-          {/* Row 1: 2-col */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
             <Painting src="/assets/images/madame-x-portrait.png" alt="Madame X portrait" loading="eager" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
             <Painting src="/assets/images/club-dj.png" alt="Club DJ painting" loading="eager" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
-          {/* Row 2: 2-col */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
             <Painting src="/assets/images/people-screaming-painting.png" alt="People screaming painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
             <Painting src="/assets/images/turtle-painting.png" alt="Turtle painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
-          {/* Row 3: full width */}
           <Painting src="/assets/images/typing-painting.png" alt="Typing painting" />
-
-          {/* Row 4: full width */}
           <Painting src="/assets/images/saw-painting.png" alt="Saw painting" />
 
-          {/* Row 5: 2-col */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
             <Painting src="/assets/images/self-portrait-melting.png" alt="Self portrait melting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
             <Painting src="/assets/images/self-portrait-embroidery.png" alt="Self portrait embroidery" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
-          {/* Row 6: 2-col */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
             <Painting src="/assets/images/redbull-painting.png" alt="Red Bull painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
             <Painting src="/assets/images/hoco-painting.png" alt="Hoco painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
-          {/* Row 7: 2-col */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
             <Painting src="/assets/images/mirror-melting.png" alt="Mirror melting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
             <Painting src="/assets/images/capitol-painting.png" alt="Capitol painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
-          {/* Row 8: 2-col */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
             <Painting src="/assets/images/self-portrait-embroidery.png" alt="Self portrait embroidery 2" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
             <Painting src="/assets/images/time-desert-painting.png" alt="Time desert painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
-          {/* Row 9: full width */}
           <Painting src="/assets/images/beach-painting.png" alt="Beach painting" />
 
-          {/* Row 10: 2-col */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
             <Painting src="/assets/images/hexagon-painting.png" alt="Hexagon painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
             <Painting src="/assets/images/guts-corset-painting.png" alt="Guts corset painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
