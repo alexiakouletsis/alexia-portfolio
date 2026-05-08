@@ -15,7 +15,7 @@ export default function ArtGallery() {
       script.src = 'https://www.instagram.com/embed.js'
       script.async = true
       document.body.appendChild(script)
-    }, 1000)
+    }, 3000)
 
     return () => {
       clearTimeout(timer)
