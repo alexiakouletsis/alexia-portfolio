@@ -123,7 +123,7 @@ function MobileTapReveal({ src, alt, label, style }: {
   function animateTo(target: number) {
     if (animRef.current) cancelAnimationFrame(animRef.current)
     const step = () => {
-      progressRef.current += (target - progressRef.current) * 0.005
+      progressRef.current += (target - progressRef.current) * 0.02
       if (Math.abs(progressRef.current - target) < 0.001) {
         progressRef.current = target
       }
