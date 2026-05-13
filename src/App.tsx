@@ -12,11 +12,14 @@ import Boston826 from './pages/design/Boston826'
 import BraveNewWorld from './pages/design/BraveNewWorld'
 import RomeBrochure from './pages/design/RomeBrochure'
 import Semester01 from './pages/design/Semester01'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
+      
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
