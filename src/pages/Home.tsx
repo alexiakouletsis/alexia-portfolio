@@ -442,7 +442,7 @@ export default function Home() {
         <div style={{ position: 'relative', width: '100%', zIndex: 1 }}>
           <img src="/assets/images/birthday-image-mobile.png" alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
           <p style={{ position: 'absolute', left: '267px', top: '97px', width: '103px', fontSize: '12px', fontFamily: 'var(--font-body)', color: 'white', lineHeight: '1.4' }}>
-            Hello! My name is Alexia Kouletsis. I grew up in Hershey, Pennsylvania. Since I was about this years old, art has consumed my life. Art has been and will always be my creative outlet, emotional comfort, and method of appreciating the beauty in world around me.
+            Hello! My name is Alexia Kouletsis. I grew up in Hershey, Pennsylvania. Since I was about nine years old, art has consumed my life. Art has been and will always be my creative outlet, emotional comfort, and method of appreciating the beauty in world around me.
           </p>
         </div>
         <div style={{ position: 'relative', width: '100%', zIndex: 2, marginTop: '-40px' }}>
