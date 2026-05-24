@@ -291,7 +291,6 @@ function Tile({ href, tile, popout1, popout2, label, size, mobileSize }: TilePro
             objectFit: 'cover',
             position: 'relative',
             zIndex: 20,
-            outline: hovered ? '4px solid #111E33' : 'none',
             transition: 'outline 300ms ease',
           }}
         />
@@ -415,7 +414,7 @@ export default function Home() {
         <div style={{ position: 'relative', width: '100%', zIndex: 1 }}>
           <img src="/assets/images/birthday-image.png" alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
           <p style={{ position: 'absolute', left: '999px', top: '159px', width: '377px', fontSize: '38px', fontFamily: 'var(--font-body)', color: 'white', lineHeight: '1.3' }}>
-            Hello! My name is Alexia Kouletsis. I grew up in Hershey, Pennsylvania. Since I was about nine years old, art has consumed my life. Art has been and will always be my creative outlet, emotional comfort, and method of appreciating the beauty in world around me.
+            Hello! My name is Alexia Kouletsis. I grew up in Hershey, Pennsylvania. Since I was about nine years old, art has consumed my life. Art has been and will always be my creative outlet, emotional comfort, and lens through viewing beauty in world around me.
           </p>
         </div>
         <div style={{ position: 'relative', width: '100%', zIndex: 2, marginTop: '-250px' }}>
@@ -442,7 +441,7 @@ export default function Home() {
         <div style={{ position: 'relative', width: '100%', zIndex: 1 }}>
           <img src="/assets/images/birthday-image-mobile.png" alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
           <p style={{ position: 'absolute', left: '267px', top: '97px', width: '103px', fontSize: '12px', fontFamily: 'var(--font-body)', color: 'white', lineHeight: '1.4' }}>
-            Hello! My name is Alexia Kouletsis. I grew up in Hershey, Pennsylvania. Since I was about nine years old, art has consumed my life. Art has been and will always be my creative outlet, emotional comfort, and method of appreciating the beauty in world around me.
+            Hello! My name is Alexia Kouletsis. I grew up in Hershey, Pennsylvania. Since I was about nine years old, art has consumed my life. Art has been and will always be my creative outlet, emotional comfort, and lens through viewing beauty in world around me.
           </p>
         </div>
         <div style={{ position: 'relative', width: '100%', zIndex: 2, marginTop: '-40px' }}>
