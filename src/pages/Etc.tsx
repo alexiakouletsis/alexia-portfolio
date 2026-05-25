@@ -18,13 +18,13 @@ export default function Etc() {
       </div>
 
       <img
-        src="/assets/images/what-else-hero.png"
+        src="/assets/images/what-else-hero.webp"
         alt="Taekwondo and travel hero"
         className="hidden md:block w-full"
         style={{ marginBottom: '64px' }}
       />
       <img
-        src="/assets/images/what-else-hero-mobile.png"
+        src="/assets/images/what-else-hero-mobile.webp"
         alt="Taekwondo and travel hero"
         className="md:hidden w-full"
         style={{ marginBottom: '48px' }}
@@ -69,13 +69,13 @@ export default function Etc() {
             such dedicated and talented people.
           </p>
           <img
-            src="/assets/images/all-tkd-images-desktop.png"
+            src="/assets/images/all-tkd-images-desktop.webp"
             alt="Taekwondo photos"
             loading="lazy"
             className="hidden md:block w-full"
           />
           <img
-            src="/assets/images/all-tkd-images-mobile.png"
+            src="/assets/images/all-tkd-images-mobile.webp"
             alt="Taekwondo photos"
             loading="lazy"
             className="md:hidden w-full"
@@ -120,13 +120,13 @@ export default function Etc() {
             incredibly grateful.
           </p>
           <img
-            src="/assets/images/all-bjj-images-desktop.png"
+            src="/assets/images/all-bjj-images-desktop.webp"
             alt="Brazilian Jiu-Jitsu photos"
             loading="lazy"
             className="hidden md:block w-full"
           />
           <img
-            src="/assets/images/all-bjj-images-mobile.png"
+            src="/assets/images/all-bjj-images-mobile.webp"
             alt="Brazilian Jiu-Jitsu photos"
             loading="lazy"
             className="md:hidden w-full"
@@ -158,7 +158,7 @@ export default function Etc() {
             {/* Row 1: Baños / Castellammare / Milan */}
             <div>
               <img
-                src="/assets/images/travel-images-row1.png"
+                src="/assets/images/travel-images-row1.webp"
                 alt="Baños Ecuador, Castellammare del Golfo, Milan Italy"
                 loading="lazy"
                 style={{ width: '100%', display: 'block' }}
@@ -184,7 +184,7 @@ export default function Etc() {
             {/* Row 2: Acropolis / Florence */}
             <div>
               <img
-                src="/assets/images/travel-images-row2.png"
+                src="/assets/images/travel-images-row2.webp"
                 alt="Acropolis of Athens, Florence Italy"
                 loading="lazy"
                 style={{ width: '100%', display: 'block' }}
@@ -209,7 +209,7 @@ export default function Etc() {
             {/* Row 3: Rome / Paris */}
             <div>
               <img
-                src="/assets/images/travel-images-row3.png"
+                src="/assets/images/travel-images-row3.webp"
                 alt="Rome Italy, Paris France"
                 loading="lazy"
                 style={{ width: '100%', display: 'block' }}
@@ -234,7 +234,7 @@ export default function Etc() {
             {/* Row 4: Barcelona / Lake Como / Vienna */}
             <div>
               <img
-                src="/assets/images/travel-images-row4.png"
+                src="/assets/images/travel-images-row4.webp"
                 alt="Barcelona Spain, Lake Como Italy, Vienna Austria"
                 loading="lazy"
                 style={{ width: '100%', display: 'block' }}

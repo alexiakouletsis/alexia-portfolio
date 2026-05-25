@@ -191,43 +191,43 @@ export default function ArtGallery() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Painting src="/assets/images/madame-x-portrait.png" alt="Madame X portrait" loading="eager" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-            <Painting src="/assets/images/club-dj.png" alt="Club DJ painting" loading="eager" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/madame-x-portrait.webp" alt="Madame X portrait" loading="eager" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/club-dj.webp" alt="Club DJ painting" loading="eager" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Painting src="/assets/images/people-screaming-painting.png" alt="People screaming painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-            <Painting src="/assets/images/turtle-painting.png" alt="Turtle painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/people-screaming-painting.webp" alt="People screaming painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/turtle-painting.webp" alt="Turtle painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
-          <Painting src="/assets/images/typing-painting.png" alt="Typing painting" />
-          <Painting src="/assets/images/saw-painting.png" alt="Saw painting" />
+          <Painting src="/assets/images/typing-painting.webp" alt="Typing painting" />
+          <Painting src="/assets/images/saw-painting.webp" alt="Saw painting" />
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Painting src="/assets/images/self-portrait-melting.png" alt="Self portrait melting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-            <Painting src="/assets/images/self-portrait-embroidery.png" alt="Self portrait embroidery" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Painting src="/assets/images/redbull-painting.png" alt="Red Bull painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-            <Painting src="/assets/images/hoco-painting.png" alt="Hoco painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/self-portrait-melting.webp" alt="Self portrait melting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/self-portrait-embroidery.webp" alt="Self portrait embroidery" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Painting src="/assets/images/mirror-melting.png" alt="Mirror melting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-            <Painting src="/assets/images/capitol-painting.png" alt="Capitol painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/redbull-painting.webp" alt="Red Bull painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/hoco-painting.webp" alt="Hoco painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Painting src="/assets/images/self-portrait-embroidery.png" alt="Self portrait embroidery 2" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-            <Painting src="/assets/images/time-desert-painting.png" alt="Time desert painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/mirror-melting.webp" alt="Mirror melting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/capitol-painting.webp" alt="Capitol painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
-          <Painting src="/assets/images/beach-painting.png" alt="Beach painting" />
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+            <Painting src="/assets/images/self-portrait-embroidery.webp" alt="Self portrait embroidery 2" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/time-desert-painting.webp" alt="Time desert painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+          </div>
+
+          <Painting src="/assets/images/beach-painting.webp" alt="Beach painting" />
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Painting src="/assets/images/hexagon-painting.png" alt="Hexagon painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-            <Painting src="/assets/images/guts-corset-painting.png" alt="Guts corset painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/hexagon-painting.webp" alt="Hexagon painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/guts-corset-painting.webp" alt="Guts corset painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
         </div>
