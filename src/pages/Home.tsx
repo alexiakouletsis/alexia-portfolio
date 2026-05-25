@@ -417,13 +417,13 @@ export default function Home() {
             Hello! My name is Alexia Kouletsis. I grew up in Hershey, Pennsylvania. Since I was about nine years old, art has consumed my life. Art has been and will always be my creative outlet, emotional comfort, and lens through viewing beauty in world around me.
           </p>
         </div>
-        <div style={{ position: 'relative', width: '100%', zIndex: 2, marginTop: '-250px' }}>
+        <div style={{ position: 'relative', width: '100%', zIndex: 2, marginTop: '-235px' }}>
           <img src="/assets/images/me-painting-image.png" alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
           <p style={{ position: 'absolute', left: '687px', top: '303px', width: '705px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
             Somewhere along the way of the previous image to this one, I additionally fell in love with coding. I took my first computer science class as a Sophomore in high school. The act of breaking down problems, building them back up again, and improving upon them evoked the same emotions that putting paint on a blank canvas did—excitement for new opportunities.
           </p>
         </div>
-        <div style={{ position: 'relative', width: '100%', zIndex: 3, marginTop: '-200px' }}>
+        <div style={{ position: 'relative', width: '100%', zIndex: 3, marginTop: '-300px' }}>
           <img src="/assets/images/me-graduating-image.png" alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
           <p style={{ position: 'absolute', left: '90px', top: '115px', width: '542px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
             I now aim to synthesize both art and technology into my life. I believe that disintegrating the boundaries between technology and other academic fields is essential for progression and perspective in any future innovations.
@@ -432,7 +432,7 @@ export default function Home() {
             I view myself as an artist who uses technology as my paintbrush. Click anywhere below to see how I apply this philosophy throughout my various works!
           </p>
         </div>
-        <img src="/assets/images/bellow-images-sketch-line.svg" alt="" style={{ width: '100%', height: '64.17px', display: 'block', position: 'relative', zIndex: 4, marginTop: '-40px' }} />
+        <img src="/assets/images/bellow-images-sketch-line.svg" alt="" style={{ width: '100%', height: '64.17px', display: 'block', position: 'relative', zIndex: 4, marginTop: '-52px' }} />
       </section>
 
       {/* STORY SECTION - MOBILE */}
@@ -444,7 +444,7 @@ export default function Home() {
             Hello! My name is Alexia Kouletsis. I grew up in Hershey, Pennsylvania. Since I was about nine years old, art has consumed my life. Art has been and will always be my creative outlet, emotional comfort, and lens through viewing beauty in world around me.
           </p>
         </div>
-        <div style={{ position: 'relative', width: '100%', zIndex: 2, marginTop: '-40px' }}>
+        <div style={{ position: 'relative', width: '100%', zIndex: 2, marginTop: '-50px' }}>
           <img src="/assets/images/me-painting-image-mobile.png" alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
           <p style={{ position: 'absolute', left: '170px', top: '94px', width: '204px', fontSize: '12px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.4' }}>
             Somewhere along the way of the previous image to this one, I additionally fell in love with coding. I took my first computer science class as a Sophomore in high school. The act of breaking down problems, building them back up again, and improving upon them evoked the same emotions that putting paint on a blank canvas did—excitement for new opportunities.
@@ -463,7 +463,7 @@ export default function Home() {
       </section>
 
       {/* RESUME + TILES SECTION */}
-      <section className="w-full px-4 md:px-10 pt-8 pb-0 md:pb-20 max-w-[1440px] mx-auto">
+      <section className="w-full px-4 md:px-10 pt-8 pb-0 md:pb-20 max-w-[1420px] mx-auto">
         <a
           href="/assets/Alexia-Kouletsis-Resume.pdf"
           download
