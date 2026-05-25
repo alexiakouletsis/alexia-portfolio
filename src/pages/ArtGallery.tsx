@@ -128,7 +128,7 @@ export default function ArtGallery() {
 
       {/* Exhibit hero photo — full bleed */}
       <img
-        src="/assets/images/all-paintings.png"
+        src="/assets/images/all-paintings.webp"
         alt="Art exhibit display"
         className="w-full"
         style={{ display: 'block', marginBottom: '64px' }}
