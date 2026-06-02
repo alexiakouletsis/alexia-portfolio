@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import React from 'react'
 
 declare global {
   interface Window {
@@ -41,25 +42,45 @@ export default function ArtGallery() {
     }
   }, [])
 
-  const Painting = ({ src, alt, style = {}, loading = 'lazy' }: {
-    src: string
-    alt: string
-    style?: React.CSSProperties
-    loading?: 'lazy' | 'eager'
-  }) => (
-    <img
-      src={src}
-      alt={alt}
-      onClick={() => setLightbox(src)}
-      loading={loading}
-      style={{
-        width: '100%',
-        display: 'block',
-        cursor: 'zoom-in',
-        ...style,
-      }}
-    />
-  )
+  const Painting = ({ src, alt, style = {}, loading = 'eager' }: {
+  src: string
+  alt: string
+  style?: React.CSSProperties
+  loading?: 'lazy' | 'eager'
+  }) => {
+    const [loaded, setLoaded] = React.useState(false)
+
+    return (
+      <div style={{ position: 'relative', width: '100%' }}>
+        {!loaded && (
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              background: 'linear-gradient(90deg, #111E33 25%, #1e3057 50%, #111E33 75%)',
+              backgroundSize: '200% 100%',
+              animation: 'skeleton-shimmer 1.5s infinite',
+            }}
+          />
+        )}
+        <img
+          src={src}
+          alt={alt}
+          onClick={() => setLightbox(src)}
+          loading={loading}
+          onLoad={() => setLoaded(true)}
+          style={{
+            width: '100%',
+            display: 'block',
+            cursor: 'zoom-in',
+            opacity: loaded ? 1 : 0,
+            transition: 'opacity 0.4s ease',
+            ...style,
+          }}
+        />
+      </div>
+    )
+  }
 
   return (
     <>
@@ -191,8 +212,8 @@ export default function ArtGallery() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Painting src="/assets/images/madame-x-portrait.webp" alt="Madame X portrait" loading="eager" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-            <Painting src="/assets/images/club-dj.webp" alt="Club DJ painting" loading="eager" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/madame-x-portrait.webp" alt="Madame X portrait" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/club-dj.webp" alt="Club DJ painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
