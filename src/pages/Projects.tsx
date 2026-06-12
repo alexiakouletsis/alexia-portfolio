@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import React from 'react'
 
 const designProjects = [
   { label: 'Goodkarma', image: '/assets/images/goodkarma-button.png', path: '/projects/design/Goodkarma' },
