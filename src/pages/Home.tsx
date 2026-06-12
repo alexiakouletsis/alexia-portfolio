@@ -406,22 +406,22 @@ export default function Home() {
         />
         <div style={{ position: 'relative', width: '100%', zIndex: 1 }}>
           <img src="/assets/images/birthday-image.png" alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
-          <p style={{ position: 'absolute', left: '999px', top: '159px', width: '377px', fontSize: '38px', fontFamily: 'var(--font-body)', color: 'white', lineHeight: '1.3' }}>
+          <p style={{ position: 'absolute', left: '999px', top: '184px', width: '377px', fontSize: '38px', fontFamily: 'var(--font-body)', color: 'white', lineHeight: '1.3' }}>
             Hello! My name is Alexia Kouletsis. I grew up in Hershey, Pennsylvania. Since I was about nine years old, art has consumed my life. Art has been and will always be my creative outlet, emotional comfort, and method of appreciating the beauty in world around me.
           </p>
         </div>
         <div style={{ position: 'relative', width: '100%', zIndex: 2, marginTop: '-250px' }}>
           <img src="/assets/images/me-painting-image.png" alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
-          <p style={{ position: 'absolute', left: '687px', top: '303px', width: '705px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
+          <p style={{ position: 'absolute', left: '687px', top: '373px', width: '705px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
             Somewhere along the way of the previous image to this one, I additionally fell in love with coding. I took my first computer science class as a Sophomore in high school. The act of breaking down problems, building them back up again, and improving upon them evoked the same emotions that putting paint on a blank canvas did—excitement for new opportunities.
           </p>
         </div>
         <div style={{ position: 'relative', width: '100%', zIndex: 3, marginTop: '-200px' }}>
           <img src="/assets/images/me-graduating-image.png" alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
-          <p style={{ position: 'absolute', left: '90px', top: '115px', width: '542px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
+          <p style={{ position: 'absolute', left: '100px', top: '172px', width: '542px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
             I now aim to synthesize both art and technology into my life. I believe that disintegrating the boundaries between technology and other academic fields is essential for progression and perspective in any future innovations.
           </p>
-          <p style={{ position: 'absolute', left: '877px', top: '690px', width: '468px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
+          <p style={{ position: 'absolute', left: '907px', top: '708px', width: '468px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
             I view myself as an artist who uses technology as my paintbrush. Click anywhere below to see how I apply this philosophy throughout my various works!
           </p>
         </div>
@@ -437,18 +437,18 @@ export default function Home() {
             Hello! My name is Alexia Kouletsis. I grew up in Hershey, Pennsylvania. Since I was about nine years old, art has consumed my life. Art has been and will always be my creative outlet, emotional comfort, and method of appreciating the beauty in world around me.
           </p>
         </div>
-        <div style={{ position: 'relative', width: '100%', zIndex: 2, marginTop: '-40px' }}>
+        <div style={{ position: 'relative', width: '100%', zIndex: 2, marginTop: '-60px' }}>
           <img src="/assets/images/me-painting-image-mobile.png" alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
-          <p style={{ position: 'absolute', left: '170px', top: '94px', width: '204px', fontSize: '12px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.4' }}>
+          <p style={{ position: 'absolute', left: '170px', top: '121px', width: '204px', fontSize: '12px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.4' }}>
             Somewhere along the way of the previous image to this one, I additionally fell in love with coding. I took my first computer science class as a Sophomore in high school. The act of breaking down problems, building them back up again, and improving upon them evoked the same emotions that putting paint on a blank canvas did—excitement for new opportunities.
           </p>
         </div>
         <div style={{ position: 'relative', width: '100%', zIndex: 3, marginTop: '-40px' }}>
           <img src="/assets/images/me-graduating-image-mobile.png" alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
-          <p style={{ position: 'absolute', left: '19px', top: '25px', width: '160px', fontSize: '12px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.4' }}>
+          <p style={{ position: 'absolute', left: '30px', top: '42px', width: '160px', fontSize: '12px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.4' }}>
             I now aim to synthesize both art and technology into my life. I believe that disintegrating the boundaries between technology and other academic fields is essential for progression and perspective in any future innovations.
           </p>
-          <p style={{ position: 'absolute', left: '251px', top: '244px', width: '122px', fontSize: '12px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.4' }}>
+          <p style={{ position: 'absolute', left: '255px', top: '254px', width: '122px', fontSize: '12px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.4' }}>
             I view myself as an artist who uses technology as my paintbrush. Click anywhere below to see how I apply this philosophy throughout my various works!
           </p>
         </div>
