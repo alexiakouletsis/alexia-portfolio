@@ -70,7 +70,7 @@ export default function Research() {
             marginBottom: '24px',
           }}
         >
-          Designing the Thinkers of Tomorrow is a research dossier that traces American public education from its Puritan roots to its Prussian-modeled present. It analyses how the physical and technological design of schools reflect opportunity and educational disparities in society. Pulling from theorists like Don Norman, Arturo Escobar, and Donna Haraway, it looks at how today's classrooms, devices, and AI tools either build or kill the capacity for curiosity and critical thought. It closes with a speculative question: if public education was designed, it can be redesigned.
+          Designing the Thinkers of Tomorrow is a research dossier that traces American public education from its Puritan roots to its Prussian-modeled present. It analyses how the physical and technological design of schools reflect opportunity and educational disparities in society. Pulling from theorists like Don Norman, Arturo Escobar, and Donna Haraway, it looks at how today's classrooms, devices, and AI tools either build or kill the capacity for curiosity and critical thought. It closes with a speculative question: if public education was designed, why can't it can be redesigned?
         </p>
       </FadeIn>
 
@@ -124,7 +124,7 @@ export default function Research() {
             marginBottom: '24px',
           }}
         >
-          When I studied abroad in Rome, Italy, my roommates knew about my coffee addiction and got me a Bialetti Moka Express for my birthday. That little stovetop pot benefitted not only my finances while I was abroad, but also all of coffee-making history. This dossier traces the Moka Express from Alfonso Bialetti's laundry-inspired cast-aluminum invention in 1933 to its status as a global kitchen staple, and explores the design details that make it so intuitive to use. Writing it felt like encapsulating my memories of Rome into applicable design theory. I now look at my moka pot with love for my friends and admiration for its complexity turned simple.
+          When I studied abroad in Rome, Italy, my roommates knew about my coffee addiction and got me a Bialetti Moka Express for my birthday. That little stovetop pot benefitted not only my finances while I was abroad, but also all of coffee-making history. This dossier traces the Moka Express from Alfonso Bialetti's laundry-inspired cast-aluminum invention in 1933 to its status as a global kitchen staple, and explores the design details that make it so intuitive to use. Writing this project encapsulated my memories of Rome into applicable design theory. I now look at my moka pot with love for my friends and admiration for its complexity turned simple.
         </p>
       </FadeIn>
 

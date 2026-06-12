@@ -142,16 +142,17 @@ export default function Etc() {
                 fontSize: 'clamp(13px, 1.5vw, 22px)',
                 color: '#111E33',
                 lineHeight: '1.7',
-                maxWidth: '820px',
-                margin: '0 0 40px 0',
+                maxWidth: '770px',
+                margin: '0 0 10px 0',
               }}
             >
-              Since I was eight years old, Taekwondo has been weaved into my life. I firmly
-              believe it has made me who I am, through both the lessons I've learned and the
-              people I've met. It truly is a lifelong community that I am proud to be a part of.
-              Now at college, I have been continuing Taekwondo as a member of Northeastern's
-              Taekwondo Club. It has been such a privilege to learn and train with a team of
-              such dedicated and talented people.
+              Since I was eight years old, Taekwondo has been one of the most defining forces
+              in my life. The discipline, the community, the countless hours of training 
+              shaped who I am in ways I'm still discovering. There is something truly special 
+              about a sport that grows with you, and Taekwondo has seen me through every high 
+              and low. Now at Northeastern, I am so proud to carry it forward as a member of 
+              the university's Taekwondo Club, training alongside some of the most dedicated 
+              and passionate people I've ever met.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
@@ -160,6 +161,7 @@ export default function Etc() {
               alt="Taekwondo photos"
               loading="lazy"
               className="hidden md:block w-full"
+              style={{ display: 'block', maxWidth: '99%', margin: '-175px auto 0' }}
             />
             <FadeImage
               src="/assets/images/all-tkd-images-mobile.webp"
@@ -197,16 +199,16 @@ export default function Etc() {
                 color: '#111E33',
                 lineHeight: '1.7',
                 maxWidth: '820px',
-                margin: '0 0 40px 0',
+                margin: '0 0 20px 0',
               }}
             >
-              After pursuing Taekwondo for so long, I wanted to continue challenging myself
-              by trying a new martial art. So when I was in high school, I tried a Mixed Martial
-              Arts class, and have been training it ever since. I fell especially in love with the
-              ground fighting aspect of MMA, leading me to Jiu-Jitsu. So of course, I am also a
-              proud member of Northeastern's Brazilian Jiu-Jitsu club. This club has pushed me
-              to grow and has given me countless amazing memories, and for that I am
-              incredibly grateful.
+              After years of Taekwondo, I found myself curious about how else I could grow. 
+              I craved being the beginner in a room again. So in high school, I tried a Mixed Martial
+              Arts class, and something about the ground fighting just clicked. Jiu-Jitsu became my 
+              new obsession. Now, being a member of Northeastern's Brazilian Jiu-Jitsu club 
+              has been one of the most rewarding decisions I've made in college. The community, 
+              energy, and sheer grit surrounding this sport have built lessons that I carry
+              with me far beyond the mat.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
@@ -215,6 +217,8 @@ export default function Etc() {
               alt="Brazilian Jiu-Jitsu photos"
               loading="lazy"
               className="hidden md:block w-full"
+              style={{ display: 'block', maxWidth: '99%', margin: '-15px auto 0' }}
+
             />
             <FadeImage
               src="/assets/images/all-bjj-images-mobile.webp"
