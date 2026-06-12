@@ -11,6 +11,33 @@ declare global {
   }
 }
 
+const DotLoader = () => (
+  <div style={{
+    position: 'absolute',
+    inset: 0,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(241, 237, 230, 0.8)',
+    zIndex: 1,
+  }}>
+    <div style={{ display: 'flex', gap: '8px' }}>
+      {[0, 1, 2].map((i) => (
+        <div
+          key={i}
+          style={{
+            width: '10px',
+            height: '10px',
+            borderRadius: '50%',
+            backgroundColor: '#111E33',
+            animation: `dot-pulse 1.4s ease-in-out ${i * 0.2}s infinite`,
+          }}
+        />
+      ))}
+    </div>
+  </div>
+)
+
 export default function ArtGallery() {
   const [lightbox, setLightbox] = useState<string | null>(null)
 
@@ -43,26 +70,17 @@ export default function ArtGallery() {
   }, [])
 
   const Painting = ({ src, alt, style = {}, loading = 'eager' }: {
-  src: string
-  alt: string
-  style?: React.CSSProperties
-  loading?: 'lazy' | 'eager'
+    src: string
+    alt: string
+    style?: React.CSSProperties
+    loading?: 'lazy' | 'eager'
   }) => {
     const [loaded, setLoaded] = React.useState(false)
+    const aspectRatio = (style as any).aspectRatio || 'auto'
 
     return (
-      <div style={{ position: 'relative', width: '100%' }}>
-        {!loaded && (
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              background: 'linear-gradient(90deg, #111E33 25%, #1e3057 50%, #111E33 75%)',
-              backgroundSize: '200% 100%',
-              animation: 'skeleton-shimmer 1.5s infinite',
-            }}
-          />
-        )}
+      <div style={{ position: 'relative', width: '100%', aspectRatio }}>
+        {!loaded && <DotLoader />}
         <img
           src={src}
           alt={alt}
@@ -71,6 +89,7 @@ export default function ArtGallery() {
           onLoad={() => setLoaded(true)}
           style={{
             width: '100%',
+            height: '100%',
             display: 'block',
             cursor: 'zoom-in',
             opacity: loaded ? 1 : 0,
@@ -84,7 +103,6 @@ export default function ArtGallery() {
 
   return (
     <>
-      {/* Lightbox overlay */}
       {lightbox && (
         <div
           onClick={() => setLightbox(null)}
@@ -113,7 +131,6 @@ export default function ArtGallery() {
         </div>
       )}
 
-      {/* Title + subtitle inside padded container */}
       <div className="w-full max-w-[1440px] mx-auto px-8 md:px-16 pt-12">
         <h1
           style={{
@@ -147,7 +164,6 @@ export default function ArtGallery() {
         </p>
       </div>
 
-      {/* Exhibit hero photo — full bleed */}
       <img
         src="/assets/images/all-paintings.webp"
         alt="Art exhibit display"
@@ -157,7 +173,6 @@ export default function ArtGallery() {
 
       <main className="w-full max-w-[1440px] mx-auto px-8 md:px-16 pb-12">
 
-        {/* Instagram embeds */}
         <div
           className="flex flex-col md:flex-row justify-center items-start"
           style={{ gap: '32px', marginBottom: '72px' }}
@@ -208,7 +223,6 @@ export default function ArtGallery() {
           Try clicking on a piece!
         </p>
 
-        {/* Gallery grid */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
@@ -253,7 +267,6 @@ export default function ArtGallery() {
 
         </div>
 
-        {/* Thanks text */}
         <p
           style={{
             fontFamily: 'var(--font-body)',

@@ -1,7 +1,64 @@
+import React from 'react'
+
+const DotLoader = () => (
+  <div style={{
+    position: 'absolute',
+    inset: 0,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(241, 237, 230, 0.8)',
+    zIndex: 1,
+  }}>
+    <div style={{ display: 'flex', gap: '8px' }}>
+      {[0, 1, 2].map((i) => (
+        <div
+          key={i}
+          style={{
+            width: '10px',
+            height: '10px',
+            borderRadius: '50%',
+            backgroundColor: '#111E33',
+            animation: `dot-pulse 1.4s ease-in-out ${i * 0.2}s infinite`,
+          }}
+        />
+      ))}
+    </div>
+  </div>
+)
+
+function FadeImage({ src, alt, className, style, loading }: {
+  src: string
+  alt: string
+  className?: string
+  style?: React.CSSProperties
+  loading?: 'lazy' | 'eager'
+}) {
+  const [loaded, setLoaded] = React.useState(false)
+
+  return (
+    <div className={className} style={{ position: 'relative' }}>
+      {!loaded && <DotLoader />}
+      <img
+        src={src}
+        alt={alt}
+        loading={loading}
+        onLoad={() => setLoaded(true)}
+        style={{
+          width: '100%',
+          display: 'block',
+          opacity: loaded ? 1 : 0,
+          transition: 'opacity 0.4s ease',
+          ...style,
+        }}
+      />
+    </div>
+  )
+}
+
 export default function Etc() {
   return (
     <>
-      {/* Hero images — full bleed, outside padded container */}
       <div className="w-full max-w-[1440px] mx-auto px-8 md:px-16 pt-12">
         <h1
           style={{
@@ -68,13 +125,13 @@ export default function Etc() {
             Taekwondo Club. It has been such a privilege to learn and train with a team of
             such dedicated and talented people.
           </p>
-          <img
+          <FadeImage
             src="/assets/images/all-tkd-images-desktop.webp"
             alt="Taekwondo photos"
             loading="lazy"
             className="hidden md:block w-full"
           />
-          <img
+          <FadeImage
             src="/assets/images/all-tkd-images-mobile.webp"
             alt="Taekwondo photos"
             loading="lazy"
@@ -119,13 +176,13 @@ export default function Etc() {
             to grow and has given me countless amazing memories, and for that I am
             incredibly grateful.
           </p>
-          <img
+          <FadeImage
             src="/assets/images/all-bjj-images-desktop.webp"
             alt="Brazilian Jiu-Jitsu photos"
             loading="lazy"
             className="hidden md:block w-full"
           />
-          <img
+          <FadeImage
             src="/assets/images/all-bjj-images-mobile.webp"
             alt="Brazilian Jiu-Jitsu photos"
             loading="lazy"
@@ -152,12 +209,10 @@ export default function Etc() {
             Travel
           </h2>
 
-          {/* Travel grid — all rows as pre-composited images */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
 
-            {/* Row 1: Baños / Castellammare / Milan */}
             <div>
-              <img
+              <FadeImage
                 src="/assets/images/travel-images-row1.webp"
                 alt="Baños Ecuador, Castellammare del Golfo, Milan Italy"
                 loading="lazy"
@@ -181,9 +236,8 @@ export default function Etc() {
               </div>
             </div>
 
-            {/* Row 2: Acropolis / Florence */}
             <div>
-              <img
+              <FadeImage
                 src="/assets/images/travel-images-row2.webp"
                 alt="Acropolis of Athens, Florence Italy"
                 loading="lazy"
@@ -206,9 +260,8 @@ export default function Etc() {
               </div>
             </div>
 
-            {/* Row 3: Rome / Paris */}
             <div>
-              <img
+              <FadeImage
                 src="/assets/images/travel-images-row3.webp"
                 alt="Rome Italy, Paris France"
                 loading="lazy"
@@ -231,9 +284,8 @@ export default function Etc() {
               </div>
             </div>
 
-            {/* Row 4: Barcelona / Lake Como / Vienna */}
             <div>
-              <img
+              <FadeImage
                 src="/assets/images/travel-images-row4.webp"
                 alt="Barcelona Spain, Lake Como Italy, Vienna Austria"
                 loading="lazy"
