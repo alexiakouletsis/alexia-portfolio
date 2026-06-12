@@ -199,7 +199,7 @@ export default function Etc() {
                 color: '#111E33',
                 lineHeight: '1.7',
                 maxWidth: '820px',
-                margin: '0 0 20px 0',
+                margin: '0 0 23px 0',
               }}
             >
               After years of Taekwondo, I found myself curious about how else I could grow. 
@@ -207,8 +207,7 @@ export default function Etc() {
               Arts class, and something about the ground fighting just clicked. Jiu-Jitsu became my 
               new obsession. Now, being a member of Northeastern's Brazilian Jiu-Jitsu club 
               has been one of the most rewarding decisions I've made in college. The community, 
-              energy, and sheer grit surrounding this sport have built lessons that I carry
-              with me far beyond the mat.
+              energy, and sheer grit surrounding this sport have given me lessons and memories that I will forever be grateful for.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
@@ -217,7 +216,7 @@ export default function Etc() {
               alt="Brazilian Jiu-Jitsu photos"
               loading="lazy"
               className="hidden md:block w-full"
-              style={{ display: 'block', maxWidth: '99%', margin: '-15px auto 0' }}
+              style={{ display: 'block', maxWidth: '99%' }}
 
             />
             <FadeImage
