@@ -1,5 +1,6 @@
- import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import React from 'react'
 
 const designProjects = [
   { label: 'Goodkarma', image: '/assets/images/goodkarma-button.png', path: '/projects/design/Goodkarma' },
@@ -34,13 +35,30 @@ const codeProjects = [
 
 function DesignCard({ label, image, path }: { label: string; image: string; path: string }) {
   const [hovered, setHovered] = useState(false)
+  const [visible, setVisible] = useState(false)
+  const ref = useRef<HTMLAnchorElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { setVisible(entry.isIntersecting) },
+      { threshold: 0.1 }
+    )
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <Link
+      ref={ref}
       to={path}
       className="flex flex-col items-center"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? 'translateY(0)' : 'translateY(20px)',
+        transition: 'opacity 0.6s ease, transform 0.6s ease',
+      }}
     >
       <img
         src={image}
@@ -76,6 +94,18 @@ function CodeCard({ title, tech, description, github, scoutLink }: {
   scoutLink?: string
 }) {
   const [githubHovered, setGithubHovered] = useState(false)
+  const [visible, setVisible] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { setVisible(entry.isIntersecting) },
+      { threshold: 0.1 }
+    )
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [])
+
   const renderDescription = (text: string, title: string) => {
     if (title === 'Goodkarma' && scoutLink) {
       const parts = text.split('Scout')
@@ -99,11 +129,15 @@ function CodeCard({ title, tech, description, github, scoutLink }: {
 
   return (
     <div
+      ref={ref}
       style={{
         border: '2px solid #111E33',
         borderRadius: '32px',
         padding: '24px',
         width: '100%',
+        opacity: visible ? 1 : 0,
+        transform: visible ? 'translateY(0)' : 'translateY(20px)',
+        transition: 'opacity 0.6s ease, transform 0.6s ease',
       }}
     >
       <h2
@@ -220,7 +254,6 @@ export default function Projects() {
   return (
     <main className="w-full max-w-[1440px] mx-auto px-8 md:px-16 py-12">
 
-      {/* Title */}
       <h1
         style={{
           fontFamily: 'var(--font-display)',
@@ -234,7 +267,6 @@ export default function Projects() {
         PROJECTS
       </h1>
 
-      {/* Tabs */}
       <div className="flex items-end justify-center gap-8 md:gap-20 mb-0">
         <TabButton
           label="Design"
@@ -248,7 +280,6 @@ export default function Projects() {
         />
       </div>
 
-      {/* Separator line */}
       <img
         src="/assets/images/projects-seperator-line.svg"
         alt=""
@@ -262,14 +293,10 @@ export default function Projects() {
         style={{ marginTop: '0', marginBottom: '40px' }}
       />
 
-      {/* Design tab content */}
       {activeTab === 'design' && (
         <div
           className="grid grid-cols-1 md:grid-cols-2 justify-items-center"
-          style={{
-            columnGap: '0px',
-            rowGap: '80px',
-          }}
+          style={{ columnGap: '0px', rowGap: '80px' }}
         >
           {designProjects.map((project) => (
             <DesignCard
@@ -282,7 +309,6 @@ export default function Projects() {
         </div>
       )}
 
-      {/* Code tab content */}
       {activeTab === 'code' && (
         <div className="flex flex-col gap-10 max-w-[900px] mx-auto">
           {codeProjects.map((project) => (

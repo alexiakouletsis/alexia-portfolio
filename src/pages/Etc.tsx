@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 const DotLoader = () => (
   <div style={{
@@ -56,6 +56,33 @@ function FadeImage({ src, alt, className, style, loading }: {
   )
 }
 
+function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+  const [visible, setVisible] = React.useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { setVisible(entry.isIntersecting) },
+      { threshold: 0.1 }
+    )
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div
+      ref={ref}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? 'translateY(0)' : 'translateY(20px)',
+        transition: `opacity 0.6s ease ${delay}s, transform 0.6s ease ${delay}s`,
+      }}
+    >
+      {children}
+    </div>
+  )
+}
+
 export default function Etc() {
   return (
     <>
@@ -89,225 +116,242 @@ export default function Etc() {
 
       <main className="w-full max-w-[1440px] mx-auto px-8 md:px-16 pb-12">
 
-        {/* Separator */}
         <img src="/assets/images/line-separator.svg" alt="" className="hidden md:block w-full mb-16" />
         <img src="/assets/images/line-separator-mobile.svg" alt="" className="md:hidden w-full mb-10" />
 
         {/* Taekwondo section */}
         <section style={{ marginBottom: '64px' }}>
-          <h2
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: 'clamp(20px, 2.5vw, 36px)',
-              fontWeight: 'bold',
-              color: '#111E33',
-              marginBottom: '20px',
-              textAlign: 'left',
-            }}
-          >
-            Taekwondo
-          </h2>
-          <p
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: 'clamp(13px, 1.5vw, 22px)',
-              color: '#111E33',
-              lineHeight: '1.7',
-              marginBottom: '40px',
-              maxWidth: '820px',
-              margin: '0 0 40px 0',
-            }}
-          >
-            Since I was eight years old, Taekwondo has been weaved into my life. I firmly
-            believe it has made me who I am, through both the lessons I've learned and the
-            people I've met. It truly is a lifelong community that I am proud to be a part of.
-            Now at college, I have been continuing Taekwondo as a member of Northeastern's
-            Taekwondo Club. It has been such a privilege to learn and train with a team of
-            such dedicated and talented people.
-          </p>
-          <FadeImage
-            src="/assets/images/all-tkd-images-desktop.webp"
-            alt="Taekwondo photos"
-            loading="lazy"
-            className="hidden md:block w-full"
-          />
-          <FadeImage
-            src="/assets/images/all-tkd-images-mobile.webp"
-            alt="Taekwondo photos"
-            loading="lazy"
-            className="md:hidden w-full"
-          />
+          <FadeIn>
+            <h2
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 'clamp(20px, 2.5vw, 36px)',
+                fontWeight: 'bold',
+                color: '#111E33',
+                marginBottom: '20px',
+                textAlign: 'left',
+              }}
+            >
+              Taekwondo
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <p
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 'clamp(13px, 1.5vw, 22px)',
+                color: '#111E33',
+                lineHeight: '1.7',
+                maxWidth: '820px',
+                margin: '0 0 40px 0',
+              }}
+            >
+              Since I was eight years old, Taekwondo has been weaved into my life. I firmly
+              believe it has made me who I am, through both the lessons I've learned and the
+              people I've met. It truly is a lifelong community that I am proud to be a part of.
+              Now at college, I have been continuing Taekwondo as a member of Northeastern's
+              Taekwondo Club. It has been such a privilege to learn and train with a team of
+              such dedicated and talented people.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <FadeImage
+              src="/assets/images/all-tkd-images-desktop.webp"
+              alt="Taekwondo photos"
+              loading="lazy"
+              className="hidden md:block w-full"
+            />
+            <FadeImage
+              src="/assets/images/all-tkd-images-mobile.webp"
+              alt="Taekwondo photos"
+              loading="lazy"
+              className="md:hidden w-full"
+            />
+          </FadeIn>
         </section>
 
-        {/* Separator */}
         <img src="/assets/images/line-separator.svg" alt="" className="hidden md:block w-full mb-16" />
         <img src="/assets/images/line-separator-mobile.svg" alt="" className="md:hidden w-full mb-10" />
 
         {/* Brazilian Jiu-Jitsu section */}
         <section style={{ marginBottom: '64px' }}>
-          <h2
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: 'clamp(20px, 2.5vw, 36px)',
-              fontWeight: 'bold',
-              color: '#111E33',
-              marginBottom: '20px',
-              textAlign: 'left',
-            }}
-          >
-            Brazilian Jiu-Jitsu
-          </h2>
-          <p
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: 'clamp(13px, 1.5vw, 22px)',
-              color: '#111E33',
-              lineHeight: '1.7',
-              marginBottom: '40px',
-              maxWidth: '820px',
-              margin: '0 0 40px 0',
-            }}
-          >
-            After pursuing Taekwondo for so long, I wanted to continue challenging myself
-            by trying a new martial art. So when I was in high school, I tried a Mixed Martial
-            Arts class, and have been training it ever since. I fell especially in love with the
-            ground fighting aspect of MMA, leading me to Jiu-Jitsu. So of course, I am also a
-            proud member of Northeastern's Brazilian Jiu-Jitsu club. This club has pushed me
-            to grow and has given me countless amazing memories, and for that I am
-            incredibly grateful.
-          </p>
-          <FadeImage
-            src="/assets/images/all-bjj-images-desktop.webp"
-            alt="Brazilian Jiu-Jitsu photos"
-            loading="lazy"
-            className="hidden md:block w-full"
-          />
-          <FadeImage
-            src="/assets/images/all-bjj-images-mobile.webp"
-            alt="Brazilian Jiu-Jitsu photos"
-            loading="lazy"
-            className="md:hidden w-full"
-          />
+          <FadeIn>
+            <h2
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 'clamp(20px, 2.5vw, 36px)',
+                fontWeight: 'bold',
+                color: '#111E33',
+                marginBottom: '20px',
+                textAlign: 'left',
+              }}
+            >
+              Brazilian Jiu-Jitsu
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <p
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 'clamp(13px, 1.5vw, 22px)',
+                color: '#111E33',
+                lineHeight: '1.7',
+                maxWidth: '820px',
+                margin: '0 0 40px 0',
+              }}
+            >
+              After pursuing Taekwondo for so long, I wanted to continue challenging myself
+              by trying a new martial art. So when I was in high school, I tried a Mixed Martial
+              Arts class, and have been training it ever since. I fell especially in love with the
+              ground fighting aspect of MMA, leading me to Jiu-Jitsu. So of course, I am also a
+              proud member of Northeastern's Brazilian Jiu-Jitsu club. This club has pushed me
+              to grow and has given me countless amazing memories, and for that I am
+              incredibly grateful.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <FadeImage
+              src="/assets/images/all-bjj-images-desktop.webp"
+              alt="Brazilian Jiu-Jitsu photos"
+              loading="lazy"
+              className="hidden md:block w-full"
+            />
+            <FadeImage
+              src="/assets/images/all-bjj-images-mobile.webp"
+              alt="Brazilian Jiu-Jitsu photos"
+              loading="lazy"
+              className="md:hidden w-full"
+            />
+          </FadeIn>
         </section>
 
-        {/* Separator */}
         <img src="/assets/images/line-separator.svg" alt="" className="hidden md:block w-full mb-16" />
         <img src="/assets/images/line-separator-mobile.svg" alt="" className="md:hidden w-full mb-10" />
 
         {/* Travel section */}
         <section style={{ marginBottom: '64px' }}>
-          <h2
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: 'clamp(20px, 2.5vw, 36px)',
-              fontWeight: 'bold',
-              color: '#111E33',
-              marginBottom: '40px',
-              textAlign: 'left',
-            }}
-          >
-            Travel
-          </h2>
+          <FadeIn>
+            <h2
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 'clamp(20px, 2.5vw, 36px)',
+                fontWeight: 'bold',
+                color: '#111E33',
+                marginBottom: '40px',
+                textAlign: 'left',
+              }}
+            >
+              Travel
+            </h2>
+          </FadeIn>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
 
-            <div>
-              <FadeImage
-                src="/assets/images/travel-images-row1.webp"
-                alt="Baños Ecuador, Castellammare del Golfo, Milan Italy"
-                loading="lazy"
-                style={{ width: '100%', display: 'block' }}
-              />
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '1fr 1fr 1fr',
-                  fontFamily: 'var(--font-body)',
-                  fontSize: 'clamp(11px, 1.2vw, 18px)',
-                  color: '#111E33',
-                  textAlign: 'center',
-                  marginTop: '8px',
-                  marginBottom: '24px',
-                }}
-              >
-                <span>Baños, Ecuador</span>
-                <span>Castellammare del Golfo, Sicily, Italy</span>
-                <span>Milan, Italy</span>
+            <FadeIn>
+              <div>
+                <FadeImage
+                  src="/assets/images/travel-images-row1.webp"
+                  alt="Baños Ecuador, Castellammare del Golfo, Milan Italy"
+                  loading="lazy"
+                  style={{ width: '100%', display: 'block' }}
+                />
+                <div
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1fr 1fr 1fr',
+                    fontFamily: 'var(--font-body)',
+                    fontSize: 'clamp(11px, 1.2vw, 18px)',
+                    color: '#111E33',
+                    textAlign: 'center',
+                    marginTop: '8px',
+                    marginBottom: '24px',
+                  }}
+                >
+                  <span>Baños, Ecuador</span>
+                  <span>Castellammare del Golfo, Sicily, Italy</span>
+                  <span>Milan, Italy</span>
+                </div>
               </div>
-            </div>
+            </FadeIn>
 
-            <div>
-              <FadeImage
-                src="/assets/images/travel-images-row2.webp"
-                alt="Acropolis of Athens, Florence Italy"
-                loading="lazy"
-                style={{ width: '100%', display: 'block' }}
-              />
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '1fr 1fr',
-                  fontFamily: 'var(--font-body)',
-                  fontSize: 'clamp(11px, 1.2vw, 18px)',
-                  color: '#111E33',
-                  textAlign: 'center',
-                  marginTop: '8px',
-                  marginBottom: '24px',
-                }}
-              >
-                <span>Acropolis of Athens, Greece</span>
-                <span>Florence, Italy</span>
+            <FadeIn delay={0.1}>
+              <div>
+                <FadeImage
+                  src="/assets/images/travel-images-row2.webp"
+                  alt="Acropolis of Athens, Florence Italy"
+                  loading="lazy"
+                  style={{ width: '100%', display: 'block' }}
+                />
+                <div
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1fr 1fr',
+                    fontFamily: 'var(--font-body)',
+                    fontSize: 'clamp(11px, 1.2vw, 18px)',
+                    color: '#111E33',
+                    textAlign: 'center',
+                    marginTop: '8px',
+                    marginBottom: '24px',
+                  }}
+                >
+                  <span>Acropolis of Athens, Greece</span>
+                  <span>Florence, Italy</span>
+                </div>
               </div>
-            </div>
+            </FadeIn>
 
-            <div>
-              <FadeImage
-                src="/assets/images/travel-images-row3.webp"
-                alt="Rome Italy, Paris France"
-                loading="lazy"
-                style={{ width: '100%', display: 'block' }}
-              />
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '1fr 1fr',
-                  fontFamily: 'var(--font-body)',
-                  fontSize: 'clamp(11px, 1.2vw, 18px)',
-                  color: '#111E33',
-                  textAlign: 'center',
-                  marginTop: '8px',
-                  marginBottom: '24px',
-                }}
-              >
-                <span>Rome, Italy</span>
-                <span>Paris, France</span>
+            <FadeIn delay={0.2}>
+              <div>
+                <FadeImage
+                  src="/assets/images/travel-images-row3.webp"
+                  alt="Rome Italy, Paris France"
+                  loading="lazy"
+                  style={{ width: '100%', display: 'block' }}
+                />
+                <div
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1fr 1fr',
+                    fontFamily: 'var(--font-body)',
+                    fontSize: 'clamp(11px, 1.2vw, 18px)',
+                    color: '#111E33',
+                    textAlign: 'center',
+                    marginTop: '8px',
+                    marginBottom: '24px',
+                  }}
+                >
+                  <span>Rome, Italy</span>
+                  <span>Paris, France</span>
+                </div>
               </div>
-            </div>
+            </FadeIn>
 
-            <div>
-              <FadeImage
-                src="/assets/images/travel-images-row4.webp"
-                alt="Barcelona Spain, Lake Como Italy, Vienna Austria"
-                loading="lazy"
-                style={{ width: '100%', display: 'block' }}
-              />
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '1fr 1fr 1fr',
-                  fontFamily: 'var(--font-body)',
-                  fontSize: 'clamp(11px, 1.2vw, 18px)',
-                  color: '#111E33',
-                  textAlign: 'center',
-                  marginTop: '8px',
-                  marginBottom: '8px',
-                }}
-              >
-                <span>Barcelona, Spain</span>
-                <span>Lake Como, Italy</span>
-                <span>Vienna, Austria</span>
+            <FadeIn delay={0.3}>
+              <div>
+                <FadeImage
+                  src="/assets/images/travel-images-row4.webp"
+                  alt="Barcelona Spain, Lake Como Italy, Vienna Austria"
+                  loading="lazy"
+                  style={{ width: '100%', display: 'block' }}
+                />
+                <div
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1fr 1fr 1fr',
+                    fontFamily: 'var(--font-body)',
+                    fontSize: 'clamp(11px, 1.2vw, 18px)',
+                    color: '#111E33',
+                    textAlign: 'center',
+                    marginTop: '8px',
+                    marginBottom: '8px',
+                  }}
+                >
+                  <span>Barcelona, Spain</span>
+                  <span>Lake Como, Italy</span>
+                  <span>Vienna, Austria</span>
+                </div>
               </div>
-            </div>
+            </FadeIn>
 
           </div>
         </section>
