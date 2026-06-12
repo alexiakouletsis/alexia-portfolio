@@ -38,6 +38,39 @@ const DotLoader = () => (
   </div>
 )
 
+const Painting = ({ src, alt, style = {}, loading = 'eager', onClickPainting }: {
+  src: string
+  alt: string
+  style?: React.CSSProperties
+  loading?: 'lazy' | 'eager'
+  onClickPainting: (src: string) => void
+}) => {
+  const [loaded, setLoaded] = React.useState(false)
+  const aspectRatio = (style as any).aspectRatio || 'auto'
+
+  return (
+    <div style={{ position: 'relative', width: '100%', aspectRatio }}>
+      {!loaded && <DotLoader />}
+      <img
+        src={src}
+        alt={alt}
+        onClick={() => onClickPainting(src)}
+        loading={loading}
+        onLoad={() => setLoaded(true)}
+        style={{
+          width: '100%',
+          height: '100%',
+          display: 'block',
+          cursor: 'zoom-in',
+          opacity: loaded ? 1 : 0,
+          transition: 'opacity 0.4s ease',
+          ...style,
+        }}
+      />
+    </div>
+  )
+}
+
 export default function ArtGallery() {
   const [lightbox, setLightbox] = useState<string | null>(null)
 
@@ -68,38 +101,6 @@ export default function ArtGallery() {
       return () => window.removeEventListener('load', loadInstagram)
     }
   }, [])
-
-  const Painting = ({ src, alt, style = {}, loading = 'eager' }: {
-    src: string
-    alt: string
-    style?: React.CSSProperties
-    loading?: 'lazy' | 'eager'
-  }) => {
-    const [loaded, setLoaded] = React.useState(false)
-    const aspectRatio = (style as any).aspectRatio || 'auto'
-
-    return (
-      <div style={{ position: 'relative', width: '100%', aspectRatio }}>
-        {!loaded && <DotLoader />}
-        <img
-          src={src}
-          alt={alt}
-          onClick={() => setLightbox(src)}
-          loading={loading}
-          onLoad={() => setLoaded(true)}
-          style={{
-            width: '100%',
-            height: '100%',
-            display: 'block',
-            cursor: 'zoom-in',
-            opacity: loaded ? 1 : 0,
-            transition: 'opacity 0.4s ease',
-            ...style,
-          }}
-        />
-      </div>
-    )
-  }
 
   return (
     <>
@@ -226,43 +227,43 @@ export default function ArtGallery() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Painting src="/assets/images/madame-x-portrait.webp" alt="Madame X portrait" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-            <Painting src="/assets/images/club-dj.webp" alt="Club DJ painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/madame-x-portrait.webp" alt="Madame X portrait" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/club-dj.webp" alt="Club DJ painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Painting src="/assets/images/people-screaming-painting.webp" alt="People screaming painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-            <Painting src="/assets/images/turtle-painting.webp" alt="Turtle painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/people-screaming-painting.webp" alt="People screaming painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/turtle-painting.webp" alt="Turtle painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
-          <Painting src="/assets/images/typing-painting.webp" alt="Typing painting" />
-          <Painting src="/assets/images/saw-painting.webp" alt="Saw painting" />
+          <Painting src="/assets/images/typing-painting.webp" alt="Typing painting" onClickPainting={setLightbox} />
+          <Painting src="/assets/images/saw-painting.webp" alt="Saw painting" onClickPainting={setLightbox} />
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Painting src="/assets/images/self-portrait-melting.webp" alt="Self portrait melting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-            <Painting src="/assets/images/self-portrait-embroidery.webp" alt="Self portrait embroidery" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Painting src="/assets/images/redbull-painting.webp" alt="Red Bull painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-            <Painting src="/assets/images/hoco-painting.webp" alt="Hoco painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/self-portrait-melting.webp" alt="Self portrait melting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/self-portrait-embroidery.webp" alt="Self portrait embroidery" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Painting src="/assets/images/mirror-melting.webp" alt="Mirror melting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-            <Painting src="/assets/images/capitol-painting.webp" alt="Capitol painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/redbull-painting.webp" alt="Red Bull painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/hoco-painting.webp" alt="Hoco painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Painting src="/assets/images/self-portrait-embroidery.webp" alt="Self portrait embroidery 2" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-            <Painting src="/assets/images/time-desert-painting.webp" alt="Time desert painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/mirror-melting.webp" alt="Mirror melting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/capitol-painting.webp" alt="Capitol painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
-          <Painting src="/assets/images/beach-painting.webp" alt="Beach painting" />
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+            <Painting src="/assets/images/self-portrait-embroidery.webp" alt="Self portrait embroidery 2" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/time-desert-painting.webp" alt="Time desert painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+          </div>
+
+          <Painting src="/assets/images/beach-painting.webp" alt="Beach painting" onClickPainting={setLightbox} />
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Painting src="/assets/images/hexagon-painting.webp" alt="Hexagon painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
-            <Painting src="/assets/images/guts-corset-painting.webp" alt="Guts corset painting" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/hexagon-painting.webp" alt="Hexagon painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
+            <Painting src="/assets/images/guts-corset-painting.webp" alt="Guts corset painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
           </div>
 
         </div>
