@@ -418,10 +418,10 @@ export default function Home() {
         </div>
         <div style={{ position: 'relative', width: '100%', zIndex: 3, marginTop: '-200px' }}>
           <img src="/assets/images/me-graduating-image.png" alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
-          <p style={{ position: 'absolute', left: '100px', top: '172px', width: '542px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
+          <p style={{ position: 'absolute', left: '117px', top: '172px', width: '542px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
             I now aim to synthesize both art and technology into my life. I believe that disintegrating the boundaries between technology and other academic fields is essential for progression and perspective in any future innovations.
           </p>
-          <p style={{ position: 'absolute', left: '907px', top: '708px', width: '468px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
+          <p style={{ position: 'absolute', left: '937px', top: '708px', width: '468px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
             I view myself as an artist who uses technology as my paintbrush. Click anywhere below to see how I apply this philosophy throughout my various works!
           </p>
         </div>
