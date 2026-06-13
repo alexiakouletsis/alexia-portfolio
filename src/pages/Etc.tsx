@@ -56,14 +56,14 @@ function FadeImage({ src, alt, className, style, loading }: {
   )
 }
 
-function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+function FadeIn({ children, delay = 0, threshold }: { children: React.ReactNode; delay?: number; threshold?: number }) {
   const [visible, setVisible] = React.useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => { setVisible(entry.isIntersecting) },
-      { threshold: 0.1 }
+      { threshold: threshold ?? 0.1 }
     )
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
@@ -155,7 +155,7 @@ export default function Etc() {
               and passionate people I've ever met.
             </p>
           </FadeIn>
-          <FadeIn delay={0.2}>
+          <FadeIn delay={0.2} threshold={0}>
             <FadeImage
               src="/assets/images/all-tkd-images-desktop.webp"
               alt="Taekwondo photos"
@@ -210,7 +210,7 @@ export default function Etc() {
               energy, and sheer grit surrounding this sport have given me lessons and memories that I will forever be grateful for.
             </p>
           </FadeIn>
-          <FadeIn delay={0.2}>
+          <FadeIn delay={0.2} threshold={0}>
             <FadeImage
               src="/assets/images/all-bjj-images-desktop.webp"
               alt="Brazilian Jiu-Jitsu photos"

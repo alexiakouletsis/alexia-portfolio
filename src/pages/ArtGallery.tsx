@@ -38,14 +38,18 @@ const DotLoader = () => (
   </div>
 )
 
-function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+function FadeIn({ children, delay = 0, threshold = 0.1 }: {
+  children: React.ReactNode
+  delay?: number
+  threshold?: number
+}) {
   const [visible, setVisible] = React.useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => { setVisible(entry.isIntersecting) },
-      { threshold: 0.1 }
+      { threshold }
     )
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
@@ -160,44 +164,50 @@ export default function ArtGallery() {
       )}
 
       <div className="w-full max-w-[1440px] mx-auto px-8 md:px-16 pt-12">
-        <h1
-          style={{
-            fontFamily: 'var(--font-display)',
-            fontSize: 'clamp(45px, 7vw, 100px)',
-            color: '#111E33',
-            lineHeight: '1',
-            marginBottom: '32px',
-            textAlign: 'center',
-          }}
-        >
-          ART<br />GALLERY
-        </h1>
-        <p
-          className="text-[14px] md:text-[20px]"
-          style={{
-            fontFamily: 'var(--font-body)',
-            color: '#111E33',
-            marginBottom: '48px',
-            textAlign: 'center',
-          }}
-        >
-          No notes. Simply scroll and enjoy! Feel free to{' '}
-          <a
-            href="mailto:kouletsis.a@northeastern.edu"
-            style={{ color: '#1D7194', textDecoration: 'underline' }}
+        <FadeIn>
+          <h1
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: 'clamp(45px, 7vw, 100px)',
+              color: '#111E33',
+              lineHeight: '1',
+              marginBottom: '32px',
+              textAlign: 'center',
+            }}
           >
-            ask me
-          </a>
-          {' '}about any of my pieces or exhibits.
-        </p>
+            ART<br />GALLERY
+          </h1>
+        </FadeIn>
+        <FadeIn delay={0.1}>
+          <p
+            className="text-[14px] md:text-[20px]"
+            style={{
+              fontFamily: 'var(--font-body)',
+              color: '#111E33',
+              marginBottom: '48px',
+              textAlign: 'center',
+            }}
+          >
+            No notes. Simply scroll and enjoy! Feel free to{' '}
+            <a
+              href="mailto:kouletsis.a@northeastern.edu"
+              style={{ color: '#1D7194', textDecoration: 'underline' }}
+            >
+              ask me
+            </a>
+            {' '}about any of my pieces or exhibits.
+          </p>
+        </FadeIn>
       </div>
 
-      <img
-        src="/assets/images/all-paintings.webp"
-        alt="Art exhibit display"
-        className="w-full"
-        style={{ display: 'block', marginBottom: '64px' }}
-      />
+      <FadeIn>
+        <img
+          src="/assets/images/all-paintings.webp"
+          alt="Art exhibit display"
+          className="w-full"
+          style={{ display: 'block', marginBottom: '64px' }}
+        />
+      </FadeIn>
 
       <main className="w-full max-w-[1440px] mx-auto px-8 md:px-16 pb-12">
 
@@ -255,70 +265,51 @@ export default function ArtGallery() {
           </p>
         </FadeIn>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
+        <FadeIn threshold={0}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
 
-          <FadeIn>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
               <Painting src="/assets/images/madame-x-portrait.webp" alt="Madame X portrait" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
               <Painting src="/assets/images/club-dj.webp" alt="Club DJ painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
             </div>
-          </FadeIn>
 
-          <FadeIn>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
               <Painting src="/assets/images/people-screaming-painting.webp" alt="People screaming painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
               <Painting src="/assets/images/turtle-painting.webp" alt="Turtle painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
             </div>
-          </FadeIn>
 
-          <FadeIn>
             <Painting src="/assets/images/typing-painting.webp" alt="Typing painting" onClickPainting={setLightbox} />
-          </FadeIn>
-
-          <FadeIn>
             <Painting src="/assets/images/saw-painting.webp" alt="Saw painting" onClickPainting={setLightbox} />
-          </FadeIn>
 
-          <FadeIn>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
               <Painting src="/assets/images/self-portrait-melting.webp" alt="Self portrait melting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
               <Painting src="/assets/images/self-portrait-embroidery.webp" alt="Self portrait embroidery" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
             </div>
-          </FadeIn>
 
-          <FadeIn>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
               <Painting src="/assets/images/redbull-painting.webp" alt="Red Bull painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
               <Painting src="/assets/images/hoco-painting.webp" alt="Hoco painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
             </div>
-          </FadeIn>
 
-          <FadeIn>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
               <Painting src="/assets/images/mirror-melting.webp" alt="Mirror melting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
               <Painting src="/assets/images/capitol-painting.webp" alt="Capitol painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
             </div>
-          </FadeIn>
 
-          <FadeIn>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
               <Painting src="/assets/images/self-portrait-embroidery.webp" alt="Self portrait embroidery 2" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
               <Painting src="/assets/images/time-desert-painting.webp" alt="Time desert painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
             </div>
-          </FadeIn>
 
-          <FadeIn>
             <Painting src="/assets/images/beach-painting.webp" alt="Beach painting" onClickPainting={setLightbox} />
-          </FadeIn>
 
-          <FadeIn>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
               <Painting src="/assets/images/hexagon-painting.webp" alt="Hexagon painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
               <Painting src="/assets/images/guts-corset-painting.webp" alt="Guts corset painting" onClickPainting={setLightbox} style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
             </div>
-          </FadeIn>
 
-        </div>
+          </div>
+        </FadeIn>
 
         <FadeIn>
           <p
