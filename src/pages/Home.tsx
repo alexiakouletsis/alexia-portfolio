@@ -475,14 +475,20 @@ export default function Home() {
           </a>
         </FadeIn>
 
-        <FadeIn delay={0.1}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-0 gap-y-16 md:gap-y-38 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-0 gap-y-16 md:gap-y-38 justify-items-center">
+          <FadeIn>
             <Tile href="/projects" tile="/assets/images/projects-tile.png" popout1="/assets/images/projects-popout-image-1.png" popout2="/assets/images/projects-popout-image-2.png" label="PROJECTS" size={320} mobileSize={220} />
+          </FadeIn>
+          <FadeIn delay={0.1}>
             <Tile href="/research" tile="/assets/images/research-tile.png" popout1="/assets/images/research-popout-image-1.png" popout2="/assets/images/research-popout-image-2.png" label="RESEARCH" mobileSize={220} size={330} />
+          </FadeIn>
+          <FadeIn delay={0.2}>
             <Tile href="/art-gallery" tile="/assets/images/art-gallery-tile.png" popout1="/assets/images/art-popout-image-1.png" popout2="/assets/images/art-popout-image-2.png" label="ART GALLERY" size={320} mobileSize={220} />
+          </FadeIn>
+          <FadeIn delay={0.3}>
             <Tile href="/etc" tile="/assets/images/more-tile.png" popout1="/assets/images/more-popout-image-1.png" popout2="/assets/images/more-popout-image-2.png" label="& MORE" size={320} mobileSize={220} />
-          </div>
-        </FadeIn>
+          </FadeIn>
+        </div>
 
       </section>
 
