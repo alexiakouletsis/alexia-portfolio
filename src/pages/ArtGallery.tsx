@@ -188,7 +188,7 @@ export default function ArtGallery() {
               textAlign: 'center',
             }}
           >
-            No notes. Simply scroll and enjoy! Feel free to{' '}
+            Scroll and enjoy! Feel free to{' '}
             <a
               href="mailto:kouletsis.a@northeastern.edu"
               style={{ color: '#1D7194', textDecoration: 'underline' }}
