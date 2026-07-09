@@ -412,16 +412,16 @@ export default function Home() {
         </div>
         <div style={{ position: 'relative', width: '100%', zIndex: 2, marginTop: '-280px' }}>
           <img src="/assets/images/me-painting-image.png" alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
-          <p style={{ position: 'absolute', left: '687px', top: '326px', width: '705px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
+          <p style={{ position: 'absolute', left: '687px', top: '323px', width: '705px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
             Somewhere along the way of the previous image to this one, I additionally fell in love with coding. I took my first computer science class as a Sophomore in high school. The act of breaking down problems, building them back up again, and improving upon them evoked the same emotions that putting paint on a blank canvas did—excitement for new opportunities.
           </p>
         </div>
         <div style={{ position: 'relative', width: '100%', zIndex: 3, marginTop: '-360px' }}>
           <img src="/assets/images/me-graduating-image.png" alt="" style={{ width: '100%', height: 'auto', display: 'block' }} />
-          <p style={{ position: 'absolute', left: '117px', top: '143px', width: '542px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
+          <p style={{ position: 'absolute', left: '117px', top: '145px', width: '542px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
             I now aim to synthesize both art and technology into my life. I believe that exploring technology through the lens of other academic fields is the most fun and rewarding approach to the field.
           </p>
-          <p style={{ position: 'absolute', left: '937px', top: '611px', width: '468px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
+          <p style={{ position: 'absolute', left: '937px', top: '602px', width: '468px', fontSize: '38px', fontFamily: 'var(--font-body)', color: '#111E33', lineHeight: '1.3' }}>
             I view myself as an artist who uses technology as my paintbrush. Click anywhere below to see how I apply this philosophy throughout my various works!
           </p>
         </div>
