@@ -279,6 +279,11 @@ export default function Research() {
           transform: skewX(-20deg);
           animation: tileShineSweep 3s ease-in-out;
         }
+        @media (max-width: 767px) {
+          .tile-shine::before {
+            width: 10%;
+          }
+        }
         @keyframes tileShineSweep {
           0% { left: -60%; }
           100% { left: 140%; }
