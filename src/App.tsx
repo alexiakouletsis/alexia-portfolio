@@ -12,6 +12,8 @@ import Boston826 from './pages/design/Boston826'
 import BraveNewWorld from './pages/design/BraveNewWorld'
 import RomeBrochure from './pages/design/RomeBrochure'
 import Semester01 from './pages/design/Semester01'
+import DesignDossiers from './pages/research/DesignDossiers'
+import IsYourSchoolSegregated from './pages/research/IsYourSchoolSegregated'
 import ScrollToTop from './components/ScrollToTop'
 
 
@@ -34,6 +36,8 @@ function App() {
           <Route path="/projects/design/BraveNewWorld" element={<BraveNewWorld />} />
           <Route path="/projects/design/RomeBrochure" element={<RomeBrochure />} />
           <Route path="/projects/design/Semester01" element={<Semester01 />} />
+          <Route path="/research/DesignDossiers" element={<DesignDossiers />} />
+          <Route path="/research/IsYourSchoolSegregated" element={<IsYourSchoolSegregated />} />
         </Routes>
       </main>
       <Footer />
