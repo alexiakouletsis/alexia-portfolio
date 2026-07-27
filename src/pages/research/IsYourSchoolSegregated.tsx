@@ -226,7 +226,7 @@ export default function IsYourSchoolSegregated() {
 
         <FadeIn delay={0.2}>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(12px, 1.6vw, 22px)', fontWeight: 'bold', color: '#B3261E', lineHeight: '1.6', marginBottom: '60px' }}>
-            **WARNING** The website is still undergoing construction and will have a conclusion + a couple more features added to it by the end of the summer. However, whats up there now is still pretty cool, and you should go look regardless! For now, toggle 'R' key on desktop to change modes on the site.
+            *WARNING* The website is still undergoing construction and will have a conclusion + a couple more features added to it by the end of the summer. However, whats up there now is still pretty cool, and you should go look regardless! For now, toggle 'R' key on desktop to change modes on the site. NUWave also currently blocks the website, so use any other wifi to access.
           </p>
         </FadeIn>
 
