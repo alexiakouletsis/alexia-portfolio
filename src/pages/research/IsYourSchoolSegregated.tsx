@@ -91,7 +91,7 @@ export default function IsYourSchoolSegregated() {
           <p style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(12px, 1.8vw, 28px)', color: '#111E33', lineHeight: '1.6', marginBottom: '60px' }}>
             As a research assistant in Northeastern's{' '}
             <a href="https://www.pluralconnections.org/" target="_blank" rel="noopener noreferrer" style={{ color: '#1D7194', textDecoration: 'underline' }}>Plural Connections Group</a>
-            , I worked with K-12 course-sharing network data from North Carolina school districts to study a form of segregation that silently persists. School integration has been proven to help disrupt concentrations of poverty and enhance academic outcomes. Yet diverse schools do not guarantee diverse friendships. A school's overall student body can look diverse on paper while individual students are still sorted into separate course pathways by race and socioeconomic status. To make that pattern seen and felt, I built Is Your School Segregated?, a scrollytelling data visualization that follows two continuing "protagonist" students through real network graphs from kindergarten through 12th grade, watching them slowly get tracked into separate course pathways as the years progress. Rather than a static chart, the piece uses interactive D3 force-directed graphs, animated transitions, and toggleable SES/race views so the reader can explore the actual data behind each grade level, not just read a conclusion about it. I designed and built the full experience, from data processing to the animation system, using React, TypeScript, D3, and Framer Motion, deployed on Vercel.
+            , I worked with K-12 course-sharing network data from North Carolina school districts to study a persistant form of modern segregation. School integration has been proven to help disrupt concentrations of poverty and enhance academic outcomes. Yet diverse schools do not guarantee diverse friendships. A school's overall student body can look diverse on paper while individual students are still sorted into separate course pathways by race and socioeconomic status. To make that pattern seen and felt, I built <em>Is Your School Segregated?</em>, a scrollytelling data visualization that follows two continuing "protagonist" students through real network graphs from kindergarten through 12th grade, watching them slowly get tracked into separate course pathways as the years progress. Rather than a static chart, the piece uses interactive D3 force-directed graphs, animated transitions, and toggleable SES/race views so the reader can explore the actual data behind each grade level, not just read a conclusion about it. I designed and built the full experience, from data processing to the animation system, using React, TypeScript, D3, and Framer Motion, deployed on Vercel.
           </p>
         </FadeIn>
 
@@ -110,14 +110,14 @@ export default function IsYourSchoolSegregated() {
               <img src="/assets/images/modeling-the-data-2.png" alt="Gephi network graph, race coloring" className="w-full" />
             </div>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(12px, 1.8vw, 28px)', color: '#111E33', lineHeight: '1.6' }}>
-              Before writing a single line of code, I loaded the raw course-sharing data into Gephi to explore it as a network. Visualizing thousands of student nodes and their shared-class edges let me spot the patterns worth telling a story about: dense, tightly-knit clusters in elementary school gradually pulling apart into visibly separate communities by high school. That early exploration shaped which grade levels, comparisons, and node behaviors the final piece would need to capture.
+              Before illustrating a single vector on Figma, I loaded the raw course-sharing data into Gephi to explore it as a network. Visualizing thousands of student nodes and their shared-class edges let me spot the patterns worth telling a story about: dense, tightly-knit clusters in elementary school gradually pulling apart into visibly separate communities by high school. That early exploration shaped which grade levels, comparisons, and node behaviors the final piece would need to capture.
             </p>
           </div>
           <div className="md:hidden flex flex-col gap-6 mb-10">
             <img src="/assets/images/modeling-the-data-1.png" alt="Gephi network graph, SES coloring" className="w-full" />
             <img src="/assets/images/modeling-the-data-2.png" alt="Gephi network graph, race coloring" className="w-full" />
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '12px', color: '#111E33', lineHeight: '1.6' }}>
-              Before writing a single line of code, I loaded the raw course-sharing data into Gephi to explore it as a network. Visualizing thousands of student nodes and their shared-class edges let me spot the patterns worth telling a story about: dense, tightly-knit clusters in elementary school gradually pulling apart into visibly separate communities by high school. That early exploration shaped which grade levels, comparisons, and node behaviors the final piece would need to capture.
+              Before illustrating a single vector on Figma, I loaded the raw course-sharing data into Gephi to explore it as a network. Visualizing thousands of student nodes and their shared-class edges let me spot the patterns worth telling a story about: dense, tightly-knit clusters in elementary school gradually pulling apart into visibly separate communities by high school. That early exploration shaped which grade levels, comparisons, and node behaviors the final piece would need to capture.
             </p>
           </div>
         </FadeIn>
@@ -226,7 +226,7 @@ export default function IsYourSchoolSegregated() {
 
         <FadeIn delay={0.2}>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(12px, 1.6vw, 22px)', fontWeight: 'bold', color: '#B3261E', lineHeight: '1.6', marginBottom: '60px' }}>
-            *WARNING* The website is still undergoing construction and will have a conclusion + a couple more features added to it by the end of the summer. However, whats up there now is still pretty cool, and you should go look regardless! For now, toggle 'R' key on desktop to change modes on the site. NUWave also currently blocks the website, so use any other wifi to access.
+            **DISCLAIMER** The website is still undergoing construction and will have a conclusion + a couple more features added to it by the end of the summer. However, whats up there now is still pretty cool, and you should go look regardless! For now, toggle 'R' key on desktop to change modes on the site.
           </p>
         </FadeIn>
 
