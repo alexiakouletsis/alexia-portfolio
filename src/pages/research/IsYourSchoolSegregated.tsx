@@ -187,7 +187,7 @@ export default function IsYourSchoolSegregated() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <div className="hidden md:grid grid-cols-2 gap-16 mb-12 items-center">
+          <div className="hidden md:grid grid-cols-2 gap-16 mb-24 items-center">
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(12px, 1.8vw, 28px)', color: '#111E33', lineHeight: '1.6' }}>
               From there, it was a matter of turning the design into a real, deployed experience: wiring up scroll-linked animations, building out each grade level's interactive graph, and making sure it held up across desktop and mobile. The site is live at{' '}
               <a href="https://isyourschoolsegregated.com" target="_blank" rel="noopener noreferrer" style={{ color: '#1D7194', textDecoration: 'underline' }}>isyourschoolsegregated.com</a>
@@ -207,7 +207,7 @@ export default function IsYourSchoolSegregated() {
               />
             </a>
           </div>
-          <div className="md:hidden flex flex-col gap-6 mb-8 items-center">
+          <div className="md:hidden flex flex-col gap-6 mb-10 items-center">
             <a href="https://isyourschoolsegregated.com" target="_blank" rel="noopener noreferrer" style={{ width: '100%' }}>
               <img
                 src="/assets/images/isyourschoolsegregated-link-button.png"
@@ -222,12 +222,6 @@ export default function IsYourSchoolSegregated() {
               {' '}for both desktop and mobile experience. Click the link (or the image) to see it!
             </p>
           </div>
-        </FadeIn>
-
-        <FadeIn delay={0.2}>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(12px, 1.6vw, 22px)', fontWeight: 'bold', color: '#B3261E', lineHeight: '1.6', marginBottom: '60px' }}>
-            **DISCLAIMER** The website is still undergoing construction and will have a conclusion + a couple more features added to it by the end of the summer. However, whats up there now is still pretty cool, and you should go look regardless! For now, toggle 'R' key on desktop to change modes on the site.
-          </p>
         </FadeIn>
 
         <img src="/assets/images/line-separator.svg" alt="" className="hidden md:block w-full mb-12" />
