@@ -74,7 +74,7 @@ export default function Goodkarma() {
               <h2 style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(22px, 3vw, 45px)', fontWeight: 'bold', color: '#111E33', marginBottom: '24px' }}>Team</h2>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '8px 24px', fontFamily: 'var(--font-body)', fontSize: 'clamp(12px, 1.5vw, 20px)', color: '#111E33' }}>
                 <p>Project Lead:</p><p>Designers:</p><p>Developers:</p>
-                <p>Rachel Yang</p><p>Sammi Chen</p><p>Melanie Hammond</p>
+                <p>Rachel Yan</p><p>Sammi Chen</p><p>Melanie Hammond</p>
                 <p></p><p>Naomi Osman</p><p>Meredith Scott</p>
                 <p>Design Lead:</p><p>Alexia Kouletsis</p><p>Alexia Kouletsis</p>
                 <p>Neha Chandran</p><p></p><p></p>
